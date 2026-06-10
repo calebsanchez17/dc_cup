@@ -24,8 +24,8 @@ const staffData = {
             ig: "https://instagram.com/linda_mc20" 
         },
         { 
-            name: "Caster Two", 
-            role: "Analista", 
+            name: "Danna", 
+            role: "Caster", 
             image: "staff/casterdana.jpeg", 
             ig: "https://instagram.com/mod_dxnx.23" 
         }
