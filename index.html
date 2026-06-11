@@ -6,46 +6,71 @@
     <title>DC CUP - Torneo de Free Fire</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <a href="https://instagram.com/cup_dc" target="_blank" class="floating-ig">
+        <i class="fab fa-instagram"></i>
+        <span>Síguenos</span>
+    </a>
+
     <div class="hero-container">
         <header class="hero-header">
-            <h1 class="title">DC CUP</h1>
-            <h2 class="subtitle">TORNEO DE FREE FIRE</h2>
-            <div class="prize-pool">PREMIO TOTAL: S/ 150</div>
+            <div class="logo-glow">
+                <h1 class="title">DC CUP</h1>
+            </div>
+            <h2 class="subtitle">TORNEO</h2>
+            <div class="prize-pool">
+                <i class="fas fa-trophy"></i> PREMIO TOTAL: S/ 150
+            </div>
+
+            <div class="countdown-container">
+                <p class="countdown-label">EL TORNEO COMIENZA EN:</p>
+                <div id="countdown" class="countdown">
+                    </div>
+            </div>
         </header>
 
         <main class="phases-grid">
-            <a href="octavos.html" class="phase-card">
+            <a href="octavos.html" class="phase-card active-phase">
+                <div class="card-glow"></div>
                 <h3>1. OCTAVOS DE FINAL</h3>
                 <p>96 Equipos | 8 Grupos</p>
-                <span class="btn-ingresar">Ingresar a Grupos</span>
+                <span class="btn-ingresar">Ingresar a Grupos <i class="fas fa-arrow-right"></i></span>
             </a>
+            
             <a href="#" class="phase-card locked">
                 <h3>2. CUARTOS DE FINAL</h3>
                 <p>48 Equipos | 4 Grupos</p>
-                <span class="btn-ingresar">Próximamente</span>
+                <span class="btn-ingresar"><i class="fas fa-lock"></i> Próximamente</span>
             </a>
+
             <a href="#" class="phase-card locked">
                 <h3>3. SEMIFINAL</h3>
-                <p>18 Equipos | AxBxC</p>
-                <span class="btn-ingresar">Próximamente</span>
+                <p>18 Equipos | 3 Series</p>
+                <span class="btn-ingresar"><i class="fas fa-lock"></i> Próximamente</span>
             </a>
+
             <a href="#" class="phase-card locked">
-                <h3>4. FINAL</h3>
-                <p>12 Equipos</p>
-                <span class="btn-ingresar">Próximamente</span>
+                <h3>4. GRAN FINAL</h3>
+                <p>12 Equipos | 4 Salas</p>
+                <span class="btn-ingresar"><i class="fas fa-lock"></i> Próximamente</span>
             </a>
         </main>
 
         <section class="staff-section">
-            <h2 class="staff-title">STAFF DEL TORNEO</h2>
+            <h2 class="staff-title">CONOCE A NUESTRO STAFF</h2>
             <div class="staff-buttons">
-                <a href="staff.html?view=moderadores" class="staff-btn">Moderadores</a>
-                <a href="staff.html?view=casters" class="staff-btn">Casters</a>
+                <a href="staff.html?view=moderadores" class="staff-btn">
+                    <i class="fas fa-shield-alt"></i> Moderadores
+                </a>
+                <a href="staff.html?view=casters" class="staff-btn">
+                    <i class="fas fa-microphone-alt"></i> Casters
+                </a>
             </div>
         </section>
     </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,83 +1,208 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Oswald', sans-serif; }
+/* =========================================
+   1. ESTILOS GLOBALES Y FONDO
+========================================= */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Oswald', sans-serif; 
+}
 
-/* Fondo mejorado: Imagen con un overlay oscuro para que el texto resalte */
 body { 
     background-color: #050505;
     background-image: linear-gradient(rgba(7, 16, 29, 0.85), rgba(7, 16, 29, 0.95)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070'); 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
     color: white; 
     min-height: 100vh; 
     overflow-x: hidden; 
 }
 
-/* Resto de tu código de navegación se mantiene igual... */
-.group-nav { padding: 20px; display: flex; align-items: center; background: rgba(0,0,0,0.9); border-bottom: 2px solid #ff0000; box-shadow: 0 4px 15px rgba(255,0,0,0.2); }
-.back-btn { color: white; text-decoration: none; font-size: 1.2rem; margin-right: 30px; transition: 0.3s; }
-.back-btn:hover { color: #ff0000; }
-.group-buttons button { background: rgba(255,255,255,0.05); color: white; border: 1px solid #333; padding: 8px 15px; margin-right: 10px; cursor: pointer; font-size: 1rem; border-radius: 4px; transition: 0.3s; }
-.group-buttons button.active, .group-buttons button:hover { background: #ff0000; color: white; border-color: #ff0000; font-weight: bold; box-shadow: 0 0 10px rgba(255,0,0,0.5); }
-
-/* Ajuste del contenedor para los 12 equipos */
-.octavos-container { display: flex; max-width: 1400px; margin: 0 auto; padding: 40px 20px; height: calc(100vh - 80px); }
-
-.player-showcase { flex: 1; position: relative; display: flex; align-items: flex-end; justify-content: center; }
-.player-png { width: 100%; max-width: 500px; object-fit: contain; filter: drop-shadow(0px 0px 30px rgba(255, 0, 0, 0.6)); z-index: 2; animation: float 6s ease-in-out infinite; }
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+/* =========================================
+   2. NAVEGACIÓN Y BOTONES DE GRUPO
+========================================= */
+.group-nav { 
+    padding: 15px 20px; 
+    display: flex; 
+    align-items: center; 
+    background: rgba(0,0,0,0.9); 
+    border-bottom: 2px solid #ff0000; 
+    box-shadow: 0 4px 15px rgba(255,0,0,0.2); 
 }
 
-.table-showcase { flex: 1.2; padding-left: 40px; z-index: 3; display: flex; flex-direction: column; justify-content: center; }
+.back-btn { 
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    margin-right: 20px; 
+    transition: 0.3s; 
+    white-space: nowrap;
+}
+.back-btn:hover { color: #ff0000; }
+
+.group-buttons {
+    display: flex;
+    overflow-x: auto; /* Scroll horizontal en móviles */
+    white-space: nowrap; 
+    width: 100%;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+/* Ocultar la barra de scroll de los botones para que se vea limpio */
+.group-buttons::-webkit-scrollbar { height: 0px; background: transparent; }
+
+.group-buttons button { 
+    background: rgba(255,255,255,0.05); 
+    color: white; 
+    border: 1px solid #333; 
+    padding: 8px 20px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    border-radius: 4px; 
+    transition: 0.3s; 
+}
+.group-buttons button.active, .group-buttons button:hover { 
+    background: #ff0000; 
+    color: white; 
+    border-color: #ff0000; 
+    font-weight: bold; 
+    box-shadow: 0 0 10px rgba(255,0,0,0.5); 
+}
+
+/* =========================================
+   3. CONTENEDOR PRINCIPAL (PANTALLA DIVIDIDA)
+========================================= */
+.octavos-container { 
+    display: flex; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    min-height: calc(100vh - 80px); 
+}
+
+/* Lado Izquierdo: Imagen del Jugador */
+.player-showcase { 
+    flex: 1; 
+    position: relative; 
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center; 
+}
+.player-png { 
+    width: 100%; 
+    max-width: 500px; 
+    object-fit: contain; 
+    filter: drop-shadow(0px 0px 30px rgba(255, 0, 0, 0.6)); 
+    z-index: 2; 
+}
+
+/* Lado Derecho: Tabla */
+.table-showcase { 
+    flex: 1.2; 
+    padding-left: 40px; 
+    z-index: 3; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
 .group-title { font-size: 2.5rem; color: #fff; margin-bottom: -10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
-.table-subtitle { font-size: 4rem; color: #ff0000; text-transform: uppercase; line-height: 1; margin-bottom: 20px; text-shadow: 0 0 15px rgba(255,0,0,0.4); }
+.table-subtitle { font-size: clamp(3rem, 5vw, 4.5rem); color: #ff0000; text-transform: uppercase; line-height: 1; margin-bottom: 30px; text-shadow: 0 0 15px rgba(255,0,0,0.4); }
 
-/* Tabla más compacta para que entren los 12 equipos sin hacer scroll infinito */
-.standings-table { display: flex; flex-direction: column; gap: 6px; width: 100%; max-width: 550px; }
+/* =========================================
+   4. ESTILOS DE LA TABLA Y EQUIPOS
+========================================= */
+.standings-table { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+    width: 100%; 
+    max-width: 550px; 
+}
 
-.team-row { display: flex; align-items: center; background: linear-gradient(90deg, #ffffff 0%, #d4af37 100%); color: black; border-radius: 4px; overflow: hidden; height: 40px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s; }
-.team-row:hover { transform: scale(1.02); }
+.team-row { 
+    display: flex; 
+    align-items: center; 
+    background: linear-gradient(90deg, #ffffff 0%, #d4af37 100%); 
+    color: black; 
+    border-radius: 4px; 
+    overflow: hidden; 
+    height: 40px; 
+    font-weight: bold; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
+}
 
-/* Diseño para los eliminados (puestos 7 al 12) */
-.team-row.eliminated { background: linear-gradient(90deg, #1a1a1a 0%, #333333 100%); color: #aaa; border: 1px solid #444; }
+/* Estilo para equipos eliminados (Puestos 7 al 12) */
+.team-row.eliminated { 
+    background: linear-gradient(90deg, #1a1a1a 0%, #333333 100%); 
+    color: #aaa; 
+    border: 1px solid #444; 
+}
 
-.rank { background: #000; color: #d4af37; width: 45px; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+.rank { 
+    background: #000; 
+    color: #d4af37; 
+    width: 45px; 
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1.2rem; 
+}
 .team-row.eliminated .rank { color: #aaa; }
 
-/* Reemplaza la sección de la tabla en tu octavos.css con esto */
+.name { 
+    flex: 1; 
+    text-transform: uppercase; 
+    font-size: 1.1rem; 
+    padding-left: 15px; 
+}
 
-.standings-table { display: flex; flex-direction: column; gap: 6px; width: 100%; max-width: 550px; }
-
-.team-row { display: flex; align-items: center; background: linear-gradient(90deg, #ffffff 0%, #d4af37 100%); color: black; border-radius: 4px; overflow: hidden; height: 40px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s; }
-.team-row:hover { transform: scale(1.02); }
-
-/* Diseño para los eliminados (puestos 7 al 12) */
-.team-row.eliminated { background: linear-gradient(90deg, #1a1a1a 0%, #333333 100%); color: #aaa; border: 1px solid #444; }
-
-.rank { background: #000; color: #d4af37; width: 45px; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
-.team-row.eliminated .rank { color: #aaa; }
-
-/* El nombre ahora tiene padding izquierdo en lugar del logo */
-.name { flex: 1; text-transform: uppercase; font-size: 1.1rem; padding-left: 15px; }
-
-.points { background: #000; color: #d4af37; padding: 0 20px; height: 100%; display: flex; align-items: center; font-size: 1.2rem; font-weight: bold; }
+.points { 
+    background: #000; 
+    color: #d4af37; 
+    padding: 0 20px; 
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+}
 .team-row.eliminated .points { color: #aaa; }
 
-/* Animación para suavizar el cambio de jugador */
-.fade-in {
-    animation: imageFadeIn 0.4s ease-out forwards;
+/* Animación para cuando cambia la imagen del jugador */
+.fade-in { animation: imageFadeIn 0.4s ease-out forwards; }
+@keyframes imageFadeIn {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes imageFadeIn {
-    0% { 
-        opacity: 0; 
-        transform: translateY(15px); /* Entra ligeramente desde abajo */
+/* =========================================
+   5. ADAPTACIÓN PARA CELULARES (RESPONSIVE)
+========================================= */
+@media (max-width: 900px) {
+    .octavos-container { 
+        flex-direction: column; /* Pone la tabla en una sola columna */
+        padding: 20px 10px; 
     }
-    100% { 
-        opacity: 1; 
-        transform: translateY(0); 
+    
+    .player-showcase { 
+        display: none; /* Oculta la foto en celular para dar espacio a la tabla */
     }
+    
+    .table-showcase { 
+        padding-left: 0; 
+        width: 100%; 
+        align-items: center; /* Centra el contenido */
+        text-align: center;
+    }
+
+    .group-title { margin-top: 10px; }
+
+    /* Ajuste de tamaños para que quepa bien en pantallas pequeñas */
+    .standings-table { max-width: 100%; }
+    .name { font-size: 0.9rem; padding-left: 10px; text-align: left; }
+    .points { padding: 0 15px; font-size: 1.1rem; }
+    .rank { width: 35px; font-size: 1rem; }
 }
