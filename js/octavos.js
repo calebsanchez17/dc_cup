@@ -1,7 +1,7 @@
 // Base de datos completa para los 8 grupos (12 equipos por grupo)
 const tournamentData = {
     1: [
-        { name: "DC ESPORT RED", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "DC ESPORT RED", points: 0 }, { name: "CLAN RZ MITX IT", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
@@ -9,7 +9,7 @@ const tournamentData = {
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     2: [
-        { name: "DC ESPORT BLACK", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "DC ESPORT BLACK", points: 0 }, { name: "TEAM 777", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
@@ -17,7 +17,7 @@ const tournamentData = {
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     3: [
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "VFT LEGIÓES", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
