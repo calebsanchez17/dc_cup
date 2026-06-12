@@ -2,7 +2,7 @@
 const tournamentData = {
     1: [
         { name: "DC ESPORT RED", points: 0 }, { name: "CLAN RZ MITX IT", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "V9 ESPORT", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
@@ -10,22 +10,22 @@ const tournamentData = {
     ],
     2: [
         { name: "DC ESPORT BLACK", points: 0 }, { name: "TEAM 777", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "GSX ESPORT", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     3: [
+        { name: "SAIYANS ESPORT", points: 0 }, { name: "B7 BEGIN", points: 0 },
         { name: "VFT LEGIÓES", points: 0 }, { name: "CUPO", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     4: [
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "SOLARIS ESPORT", points: 0 }, { name: "RX7 ESPORTS", points: 0 },
         { name: "DC ESPORT RED", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
@@ -33,7 +33,7 @@ const tournamentData = {
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     5: [
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "LOS VAGOS", points: 0 }, { name: "RED RIOT GANG ESPORT", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "DC ESPORT BLACK", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
@@ -41,15 +41,15 @@ const tournamentData = {
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     6: [
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "DRAGÓN Z", points: 0 }, { name: "CLAN KMK GAMING", points: 0 },
+        { name: "FURY E-SPORT", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     7: [
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "TEAM KING", points: 0 }, { name: "CLAN CARTEL 23!", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "DC ESPORT RED", points: 0 }, { name: "CUPO", points: 0 },
@@ -57,7 +57,7 @@ const tournamentData = {
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     8: [
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "MONKEY SQUAD", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
