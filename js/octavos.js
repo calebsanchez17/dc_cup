@@ -58,7 +58,7 @@ const tournamentData = {
     ],
     8: [
         { name: "MONKEY SQUAD", points: 0 }, { name: "GHOST DEMONDS", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "CLAN WE ARE", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "DC ESPORT BLACK", points: 0 }, { name: "CUPO", points: 0 },
