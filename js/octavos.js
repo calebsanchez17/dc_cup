@@ -3,7 +3,7 @@ const tournamentData = {
     1: [
         { name: "DC ESPORT RED", points: 0 }, { name: "CLAN RZ MITX IT", points: 0 },
         { name: "V9 ESPORT", points: 0 }, { name: "BR ESPORT", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "ESPORTS GX", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
@@ -11,7 +11,7 @@ const tournamentData = {
     2: [
         { name: "DC ESPORT BLACK", points: 0 }, { name: "TEAM 777", points: 0 },
         { name: "GSX ESPORT", points: 0 }, { name: "SAVAGE ESPORT", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "BIOHAZARD ESPORTS", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
@@ -19,7 +19,7 @@ const tournamentData = {
     3: [
         { name: "SAIYANS ESPORT", points: 0 }, { name: "B7 BEGIN", points: 0 },
         { name: "VFT LEGIÓES", points: 0 }, { name: "SAVAGE ACD ESPORT", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "CLAN XHILEE 65", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
