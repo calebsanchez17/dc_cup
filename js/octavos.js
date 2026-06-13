@@ -57,7 +57,7 @@ const tournamentData = {
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     8: [
-        { name: "MONKEY SQUAD", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "MONKEY SQUAD", points: 0 }, { name: "GHOST DEMONDS", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
