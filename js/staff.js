@@ -12,6 +12,12 @@ const staffData = {
             role: "Moderadora", 
             image: "staff/moddana.jpeg", 
             ig: "https://instagram.com/mod_dxnx.23" 
+        },
+        { 
+            name: "Cesar", 
+            role: "Moderador", 
+            image: "staff/modcesar.jpeg", 
+            ig: "https://instagram.com/kmk._cesar.mod" 
         }
         
         // Agrega más moderadores aquí
