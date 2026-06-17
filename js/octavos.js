@@ -3,16 +3,16 @@ const tournamentData = {
     1: [
         { name: "DC ESPORT RED", points: 0 }, { name: "CLAN RZ MITX IT", points: 0 },
         { name: "V9 ESPORT", points: 0 }, { name: "BR ESPORT", points: 0 },
-        { name: "ESPORTS GX", points: 0 }, { name: "7Z ESPORTS", points: 0 },
+        { name: "ESPORTS GX", points: 0 }, { name: "FAMILY E-SPORT", points: 0 },
         { name: "RED RIOT GAMG", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     2: [
         { name: "DC ESPORT BLACK", points: 0 }, { name: "TEAM 777", points: 0 },
-        { name: "GSX ESPORT", points: 0 }, { name: "SAVAGE ESPORT", points: 0 },
+        { name: "GSX ESPORT", points: 0 }, { name: "ØNEFEELING FEM", points: 0 },
         { name: "DELTA ESPORT DIVISIÓN", points: 0 }, { name: "VIRTUS STRIKE ESPORTS", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "TEAM CRAZY RABBITS", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
@@ -20,7 +20,7 @@ const tournamentData = {
         { name: "SAIYANS ESPORT", points: 0 }, { name: "B7 BEGIN", points: 0 },
         { name: "VFT LEGIÓES", points: 0 }, { name: "SAVAGE ACD ESPORT", points: 0 },
         { name: "CLAN XHILEE 65", points: 0 }, { name: "KETZA WARRIORS", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "CLAN VISIONBULLS", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
@@ -28,7 +28,7 @@ const tournamentData = {
         { name: "SOLARIS ESPORT", points: 0 }, { name: "RX7 ESPORTS", points: 0 },
         { name: "DC ESPORT RED", points: 0 }, { name: "LTX E-SPORTS", points: 0 },
         { name: "ALPHA GAMING ESPORT", points: 0 }, { name: "32 ESPORT", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "VIOLAᵛᶫCLAN", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
@@ -36,14 +36,14 @@ const tournamentData = {
         { name: "LOS VAGOS", points: 0 }, { name: "RED RIOT GANG ESPORT", points: 0 },
         { name: "B7 E-SPORT", points: 0 }, { name: "TEAM WACHINGTON", points: 0 },
         { name: "DC ESPORT BLACK", points: 0 }, { name: "BIOHAZARD ESPORTS", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "CLAN LEVELING UP", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     6: [
         { name: "DRAGÓN Z", points: 0 }, { name: "CLAN KMK GAMING", points: 0 },
         { name: "FURY E-SPORT", points: 0 }, { name: "B7 E-SPORT", points: 0 },
-        { name: "ØNEFEELING FEM", points: 0 }, { name: "CLAN TS BÉLICOS", points: 0 },
+        { name: "SAVAGE ESPORT", points: 0 }, { name: "CLAN TS BÉLICOS", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
