@@ -37,7 +37,7 @@ const tournamentData = {
         { name: "F7 E-SPORT", points: 0 }, { name: "TEAM WACHINGTON", points: 0 },
         { name: "DC ESPORT BLACK", points: 0 }, { name: "BIOHAZARD ESPORTS", points: 0 },
         { name: "CLAN LEVELING UP", points: 0 }, { name: "ESPORT HLP", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "TEAM L3P", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     6: [
@@ -45,7 +45,7 @@ const tournamentData = {
         { name: "FURY E-SPORT", points: 0 }, { name: "CLAN LEGIONMURSI", points: 0 },
         { name: "SAVAGE ESPORT", points: 0 }, { name: "CLAN TS BÉLICOS", points: 0 },
         { name: "CLAN WONKRU", points: 0 }, { name: "BLΛCK FURY", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "TEAM TX", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     7: [
