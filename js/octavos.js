@@ -1,11 +1,11 @@
-// Base de datos completa para los 8 grupos (12 equipos por grupo)
+// Base de datos completa para los 8 grupos
 const tournamentData = {
     1: [
         { name: "DC ESPORT RED", points: 0 }, { name: "CLAN RZ MITX IT", points: 0 },
         { name: "V9 ESPORT", points: 0 }, { name: "BR ESPORT", points: 0 },
         { name: "ESPORTS GX", points: 0 }, { name: "FAMILY E-SPORT", points: 0 },
         { name: "RED RIOT GAMG", points: 0 }, { name: "CLAN A7", points: 0 },
-        { name: "LW ESPORT", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "LW ESPORT", points: 0 }, { name: "CLAN NR", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     2: [
@@ -53,75 +53,87 @@ const tournamentData = {
         { name: "CLAN DARK BLOOD", points: 0 }, { name: "URU TEAM", points: 0 },
         { name: "DARK KING", points: 0 }, { name: "TEAM X7 FIELES", points: 0 },
         { name: "DC ESPORT RED", points: 0 }, { name: "CLAN SLNT〆KLRS", points: 0 },
-        { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "ESPORT NR ", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ],
     8: [
         { name: "MONKEY SQUAD", points: 0 }, { name: "GHOST DEMONDS", points: 0 },
         { name: "CLAN WE ARE", points: 0 }, { name: "TEAM SAVAGE", points: 0 },
         { name: "TEAM 04", points: 0 }, { name: "CLAN W$N", points: 0 },
-        { name: "TEAM SANTOSGANG", points: 0 }, { name: "CUPO", points: 0 },
+        { name: "TEAM SANTOSGANG", points: 0 }, { name: "INFIERNO POLAR ESPORT", points: 0 },
         { name: "DC ESPORT BLACK", points: 0 }, { name: "CUPO", points: 0 },
         { name: "CUPO", points: 0 }, { name: "CUPO", points: 0 }
     ]
 };
 
-// Objeto con las rutas de las fotos de los jugadores por grupo
 const playerImages = {
-    1: "assets/grupo1.png",
-    2: "assets/grupo2.png",
-    3: "assets/grupo3.png",
-    4: "assets/grupo4.png",
-    5: "assets/grupo5.png",
-    6: "assets/grupo6.png",
-    7: "assets/grupo7.png",
-    8: "assets/grupo8.png"
+    1: "assets/grupo1.png", 2: "assets/grupo2.png", 3: "assets/grupo3.png", 4: "assets/grupo4.png",
+    5: "assets/grupo5.png", 6: "assets/grupo6.png", 7: "assets/grupo7.png", 8: "assets/grupo8.png"
 };
+
+// Configuración detallada de Staff y Horarios (GMT-05:00 Hora de Perú)
+const groupScheduleAndStaff = {
+    1: { date: "2026-07-04T20:00:00-05:00", mod: { name: "Caleb", img: "staff/modcaleb.jpeg", ig: "desing_paton" }, caster: { name: "Dana", img: "staff/casterdana.jpeg", ig: "mod_dxnx.23" } },
+    2: { date: "2026-07-04T21:00:00-05:00", mod: { name: "Caleb", img: "staff/modcaleb.jpeg", ig: "desing_paton" }, caster: { name: "Dana", img: "staff/casterdana.jpeg", ig: "mod_dxnx.23" } },
+    3: { date: "2026-07-05T20:00:00-05:00", mod: { name: "Alu", img: "staff/modalu.jpeg", ig: "aluruizz_" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
+    4: { date: "2026-07-05T21:00:00-05:00", mod: { name: "Alu", img: "staff/modalu.jpeg", ig: "aluruizz_" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
+    5: { date: "2026-07-06T20:00:00-05:00", mod: { name: "Cesar", img: "staff/modcesar.jpeg", ig: "kmk._cesar.mod" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
+    6: { date: "2026-07-06T21:00:00-05:00", mod: { name: "Cesar", img: "staff/modcesar.jpeg", ig: "kmk._cesar.mod" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
+    7: { date: "2026-07-07T20:00:00-05:00", mod: { name: "Eri", img: "staff/moderi.jpeg", ig: "" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
+    8: { date: "2026-07-07T21:00:00-05:00", mod: { name: "Eri", img: "staff/moderi.jpeg", ig: "" }, caster: { name: "", img: "staff/.jpeg", ig: "" } }
+};
+
+let countdownInterval = null;
 
 // Generar botones de navegación de grupos
 const groupButtonsContainer = document.getElementById('groupButtons');
 for (let i = 1; i <= 8; i++) {
     const btn = document.createElement('button');
     btn.textContent = `Grupo ${i}`;
-    if (i === 1) btn.classList.add('active'); // Grupo 1 activo por defecto
+    if (i === 1) btn.classList.add('active');
     btn.onclick = () => renderGroup(i, btn);
     groupButtonsContainer.appendChild(btn);
 }
 
-// Función unificada para renderizar la tabla y cambiar la imagen
 function renderGroup(groupNum, activeBtn = null) {
-    // 1. Actualizar clase activa en botones
     if (activeBtn) {
         document.querySelectorAll('.group-buttons button').forEach(b => b.classList.remove('active'));
         activeBtn.classList.add('active');
     }
 
-    // 2. Actualizar título con el número de grupo
     document.getElementById('currentGroupNum').textContent = groupNum;
 
-    // 3. Cambiar la imagen del jugador
+    // Cambiar la imagen principal del competidor
     const playerImgElement = document.getElementById('playerImage');
     if (playerImgElement && playerImages[groupNum]) {
-        // Truco para reiniciar la animación CSS (si la estás usando)
-        playerImgElement.classList.remove('fade-in');
-        void playerImgElement.offsetWidth; // Fuerza al navegador a recalcular
-        playerImgElement.classList.add('fade-in');
-        
-        // Cambiar la ruta de la imagen
         playerImgElement.src = playerImages[groupNum];
     }
 
-    // 4. Limpiar contenedor de la tabla
+    // Actualizar sección del Staff asignado dinámicamente
+    const staffData = groupScheduleAndStaff[groupNum];
+    if (staffData) {
+        document.getElementById('modName').textContent = staffData.mod.name;
+        document.getElementById('modImage').src = staffData.mod.img;
+        document.getElementById('modInstagram').href = `https://instagram.com/${staffData.mod.ig}`;
+        document.getElementById('modInstagram').innerHTML = `<i class="fab fa-instagram"></i> @${staffData.mod.ig}`;
+
+        document.getElementById('casterName').textContent = staffData.caster.name;
+        document.getElementById('casterImage').src = staffData.caster.img;
+        document.getElementById('casterInstagram').href = `https://instagram.com/${staffData.caster.ig}`;
+        document.getElementById('casterInstagram').innerHTML = `<i class="fab fa-instagram"></i> @${staffData.caster.ig}`;
+        
+        // Ejecutar conteo regresivo para este grupo específico
+        startTimer(staffData.date);
+    }
+
+    // Limpiar e insertar filas de la tabla de posiciones
     const tableContainer = document.getElementById('standingsTable');
     tableContainer.innerHTML = '';
 
     const teams = tournamentData[groupNum] || [];
-
-    // 5. Renderizar filas de los equipos dinámicamente
     teams.forEach((team, index) => {
         const rank = index + 1;
-        // Los primeros 6 clasifican, del 7 al 12 quedan eliminados
-        const isEliminated = rank > 6 ? 'eliminated' : '';
+        const isEliminated = rank > 6 ? 'eliminated' : 'qualified';
 
         const rowHTML = `
             <div class="team-row ${isEliminated}">
@@ -134,5 +146,37 @@ function renderGroup(groupNum, activeBtn = null) {
     });
 }
 
-// Inicializar mostrando el Grupo 1 al cargar la página
+// Función del Temporizador
+function startTimer(targetDateString) {
+    clearInterval(countdownInterval);
+    const targetTime = new Date(targetDateString).getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = targetTime - now;
+
+        if (diff <= 0) {
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('mins').textContent = '00';
+            document.getElementById('secs').textContent = '00';
+            clearInterval(countdownInterval);
+            return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = String(d).padStart(2, '0');
+        document.getElementById('hours').textContent = String(h).padStart(2, '0');
+        document.getElementById('mins').textContent = String(m).padStart(2, '0');
+        document.getElementById('secs').textContent = String(s).padStart(2, '0');
+    }
+
+    updateCountdown();
+    countdownInterval = setInterval(updateCountdown, 1000);
+}
+
 window.onload = () => renderGroup(1);

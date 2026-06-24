@@ -5,29 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Octavos de Final - DC CUP</title>
     <link rel="stylesheet" href="css/octavos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Teko:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="group-nav">
         <a href="index.html" class="back-btn">← Volver</a>
-        <div class="group-buttons" id="groupButtons">
-            </div>
+        <div class="group-buttons" id="groupButtons"></div>
     </nav>
+
+    <div class="header-container">
+        <div class="title-block">
+            <h1 class="group-title">GRUPO <span id="currentGroupNum">1</span></h1>
+            <h2 class="table-subtitle">TABLA</h2>
+        </div>
+
+        <div class="countdown-box">
+            <p class="countdown-label">EL TORNEO COMIENZA EN:</p>
+            <div class="countdown-timer">
+                <div class="timer-segment">
+                    <span id="days">00</span>
+                    <span class="segment-label">DÍAS</span>
+                </div>
+                <div class="timer-segment">
+                    <span id="hours">00</span>
+                    <span class="segment-label">HORAS</span>
+                </div>
+                <div class="timer-segment">
+                    <span id="mins">00</span>
+                    <span class="segment-label">MIN</span>
+                </div>
+                <div class="timer-segment">
+                    <span id="secs">00</span>
+                    <span class="segment-label">SEG</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="octavos-container">
         
-        <div class="player-showcase">
-            <img src="assets/grupo1.png" alt="Jugador Destacado" id="playerImage" class="player-png">
+        <div class="left-column">
+            <div class="player-showcase">
+                <img src="assets/grupo1.png" alt="Jugador Destacado" id="playerImage" class="player-png">
+            </div>
+
+            <div class="staff-showcase">
+                <div class="staff-card card-mod">
+                    <img id="modImage" src="staff/modcaleb.jpeg" alt="Moderador" class="staff-avatar">
+                    <div class="staff-info">
+                        <span class="staff-role role-mod">MODERADOR</span>
+                        <h3 id="modName" class="staff-name">Caleb</h3>
+                        <a id="modInstagram" href="https://instagram.com/caleb_ig" target="_blank" class="staff-ig">
+                            <i class="fab fa-instagram"></i> @caleb_ig
+                        </a>
+                    </div>
+                </div>
+
+                <div class="staff-card card-caster">
+                    <img id="casterImage" src="staff/casterdana.jpeg" alt="Caster" class="staff-avatar">
+                    <div class="staff-info">
+                        <span class="staff-role role-caster">CASTER OFICIAL</span>
+                        <h3 id="casterName" class="staff-name">Dana</h3>
+                        <a id="casterInstagram" href="https://instagram.com/dana_ig" target="_blank" class="staff-ig">
+                            <i class="fab fa-instagram"></i> @dana_ig
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="table-showcase">
-            <h1 class="group-title">GRUPO <span id="currentGroupNum">1</span></h1>
-            <h2 class="table-subtitle">TABLA</h2>
-            
-            <div class="standings-table" id="standingsTable">
-                </div>
+            <div class="standings-table" id="standingsTable"></div>
         </div>
 
-    </div> <script src="js/octavos.js"></script>
+    </div>
+
+    <script src="js/octavos.js"></script>
 </body>
 </html>
