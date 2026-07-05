@@ -18,7 +18,25 @@ const staffData = {
             role: "Moderador", 
             image: "staff/modcesar.jpeg", 
             ig: "https://instagram.com/kmk._cesar.mod" 
-        }
+        },
+        { 
+            name: "Eri", 
+            role: "Moderadora", 
+            image: "staff/moderi.jpeg", 
+            ig: "https://instagram.com/moroff_" 
+        },
+        { 
+            name: "Teo", 
+            role: "Moderador", 
+            image: "staff/modteo.jpeg", 
+            ig: "https://instagram.com/teoo__ff.mod" 
+        },
+        { 
+            name: "Alu", 
+            role: "Moderadora", 
+            image: "staff/modalu.jpeg", 
+            ig: "https://instagram.com/aluruizz_" 
+        },
         
         // Agrega más moderadores aquí
     ],
@@ -34,6 +52,12 @@ const staffData = {
             role: "Caster", 
             image: "staff/casterdana.jpeg", 
             ig: "https://instagram.com/mod_dxnx.23" 
+        },
+        { 
+            name: "Nikki", 
+            role: "Caster", 
+            image: "staff/casternikki.jpeg", 
+            ig: "https://instagram.com/nikki30.ff" 
         }
         // Agrega más casters aquí
     ]

@@ -1,44 +1,44 @@
 // Base de datos completa para los 8 grupos
 const tournamentData = {
     1: [
-        { name: "DC ESPORT RED", points: 0 }, { name: "CLAN RZ MITX IT", points: 0 },
-        { name: "V9 ESPORT", points: 0 }, { name: "BR ESPORT", points: 0 },
-        { name: "ESPORTS GX", points: 0 }, { name: "FAMILY E-SPORT", points: 0 },
-        { name: "RED RIOT GAMG", points: 0 }, { name: "CLAN A7", points: 0 },
-        { name: "LW ESPORT", points: 0 }, { name: "CLAN NR", points: 0 },
-        { name: "HEADSHOO7", points: 0 }, { name: "CUPO", points: 0 }
+        { name: "DC ESPORT RED", points: 29 }, { name: "CLAN RZ MITX IT", points: 3 },
+        { name: "V9 ESPORT", points: 41 }, { name: "BR ESPORT", points: 44 },
+        { name: "ESPORTS GX", points: 0 }, { name: "FURIUS LYNX SPORT", points: 30 },
+        { name: "RED RIOT GAMG", points: 45 }, { name: "CLAN A7", points: 13 },
+        { name: "LW ESPORT", points: 20 }, { name: "CLAN NR", points: 0 },
+        { name: "HEADSHOO7", points: 21 }, { name: "TEAM SANTOSGANG", points: 37 }
     ],
     2: [
-        { name: "DC ESPORT BLACK", points: 0 }, { name: "TEAM 777", points: 0 },
-        { name: "GSX ESPORT", points: 0 }, { name: "ØNEFEELING FEM", points: 0 },
-        { name: "DELTA ESPORT DIVISIÓN", points: 0 }, { name: "VIRTUS STRIKE ESPORTS", points: 0 },
-        { name: "TEAM CRAZY RABBITS", points: 0 }, { name: "TEAM AFA 03", points: 0 },
-        { name: "CLAN TUCU OFICIAL", points: 0 }, { name: "TEAM DEVIANSTGANG", points: 0 },
-        { name: "LAST ESPORT", points: 0 }, { name: "CUPO", points: 0 }
+        { name: "DC ESPORT BLACK", points: 11 }, { name: "TEAM 777", points: 38 },
+        { name: "GSX ESPORT", points: 30 }, { name: "ØNEFEELING FEM", points: 20 },
+        { name: "DELTA ESPORT DIVISIÓN", points: 40 }, { name: "VIRTUS STRIKE ESPORTS", points: 0 },
+        { name: "TEAM CRAZY RABBITS", points: 57 }, { name: "TEAM AFA 03", points: 14 },
+        { name: "CLAN TUCU OFICIAL", points: 5 }, { name: "TEAM DEVIANSTGANG", points: 23 },
+        { name: "BR ESPORT", points: 24 }, { name: "TEAM KING", points: 5 }
     ],
     3: [
         { name: "SAIYANS ESPORT", points: 0 }, { name: "B7 BEGIN", points: 0 },
         { name: "VFT LEGIÓES", points: 0 }, { name: "SAVAGE ACD ESPORT", points: 0 },
-        { name: "CLAN XHILEE 65", points: 0 }, { name: "KETZA WARRIORS", points: 0 },
+        { name: "CLAN XHILEE 65", points: 0 }, { name: "ROOSTER INVADING", points: 0 },
         { name: "CLAN VISIONBULLS", points: 0 }, { name: "ESPORT GROUND ZERO 9", points: 0 },
         { name: "CLAN RFW ESPORTS", points: 0 }, { name: "CLAN DARK GODS", points: 0 },
-        { name: "ROOSTER FEM DC", points: 0 }, { name: "CUPO", points: 0 }
+        { name: "ROOSTER FEM DC", points: 0 }, { name: "SAMURAI", points: 0 }
     ],
     4: [
         { name: "SOLARIS ESPORT", points: 0 }, { name: "RX7 ESPORTS", points: 0 },
-        { name: "DC ESPORT RED", points: 0 }, { name: "LTX E-SPORTS", points: 0 },
+        { name: "DC ESPORT RED", points: 0 }, { name: "RNS ESPORTS", points: 0 },
         { name: "B7 ESPORT", points: 0 }, { name: "32 ESPORT", points: 0 },
         { name: "VIOLAᵛᶫCLAN", points: 0 }, { name: "NOVA REVELLION ESPORTS", points: 0 },
         { name: "LX SPORT", points: 0 }, { name: "AG STORM ESPORT", points: 0 },
-        { name: "CLAN VIRUS", points: 0 }, { name: "CUPO", points: 0 }
+        { name: "CLAN VIRUS", points: 0 }, { name: "BIOHAZARD ESPORTS", points: 0 }
     ],
     5: [
-        { name: "LOS VAGOS", points: 0 }, { name: "RED RIOT GANG ESPORT", points: 0 },
+        { name: "LOS VAGOS", points: 0 }, { name: "RRG ESPORT", points: 0 },
         { name: "F7 E-SPORT", points: 0 }, { name: "TEAM WACHINGTON", points: 0 },
         { name: "DC ESPORT BLACK", points: 0 }, { name: "BIOHAZARD ESPORTS", points: 0 },
         { name: "CLAN LEVELING UP", points: 0 }, { name: "ESPORT HLP", points: 0 },
         { name: "TEAM L3P", points: 0 }, { name: "LIFE REWORK", points: 0 },
-        { name: "TEAM BOSS STAR", points: 0 }, { name: "CUPO", points: 0 }
+        { name: "TEAM BOSS STAR", points: 0 }, { name: "RX7 ESPORT", points: 0 }
     ],
     6: [
         { name: "DRAGÓN Z", points: 0 }, { name: "CLAN KMK GAMING", points: 0 },
@@ -46,15 +46,15 @@ const tournamentData = {
         { name: "SAVAGE ESPORT", points: 0 }, { name: "CLAN TS BÉLICOS", points: 0 },
         { name: "CLAN WONKRU", points: 0 }, { name: "BLΛCK FURY", points: 0 },
         { name: "TEAM TX", points: 0 }, { name: "SAMURAI", points: 0 },
-        { name: "DC ESPORT RED", points: 0 }, { name: "CUPO", points: 0 }
+        { name: "DC ESPORT RED", points: 0 }, { name: "ESPORT GROUND ZERO 9", points: 0 }
     ],
     7: [
         { name: "TEAM KING", points: 0 }, { name: "CLAN CARTEL 23!", points: 0 },
         { name: "CLAN DARK BLOOD", points: 0 }, { name: "URU TEAM", points: 0 },
-        { name: "DARK KING", points: 0 }, { name: "TEAM X7 FIELES", points: 0 },
+        { name: "DARK KING", points: 0 }, { name: "GA! ESPORT", points: 0 },
         { name: "ROOSTER FEM DC", points: 0 }, { name: "CLAN SLNT〆KLRS", points: 0 },
         { name: "ESPORT NR ", points: 0 }, { name: "ESPORT BLK BLACK", points: 0 },
-        { name: "SHINKARU GG ESPORT", points: 0 }, { name: "CUPO", points: 0 }
+        { name: "SHINKARU GG ESPORT", points: 0 }, { name: "CLAN TUCU OFICIAL", points: 0 }
     ],
     8: [
         { name: "MONKEY SQUAD", points: 0 }, { name: "GHOST DEMONDS", points: 0 },
@@ -62,7 +62,7 @@ const tournamentData = {
         { name: "TEAM 04", points: 0 }, { name: "CLAN W$N", points: 0 },
         { name: "TEAM SANTOSGANG", points: 0 }, { name: "INFIERNO POLAR ESPORT", points: 0 },
         { name: "DC ESPORT BLACK", points: 0 }, { name: "DYNEX ESPORT", points: 0 },
-        { name: "MNS ESPORT", points: 0 }, { name: "CUPO", points: 0 }
+        { name: "MNS ESPORT", points: 0 }, { name: "V9 ESPORT", points: 0 }
     ]
 };
 
@@ -76,11 +76,11 @@ const groupScheduleAndStaff = {
     1: { date: "2026-07-04T20:00:00-05:00", mod: { name: "Caleb", img: "staff/modcaleb.jpeg", ig: "desing_paton" }, caster: { name: "Dana", img: "staff/casterdana.jpeg", ig: "mod_dxnx.23" } },
     2: { date: "2026-07-04T21:00:00-05:00", mod: { name: "Caleb", img: "staff/modcaleb.jpeg", ig: "desing_paton" }, caster: { name: "Dana", img: "staff/casterdana.jpeg", ig: "mod_dxnx.23" } },
     3: { date: "2026-07-05T20:00:00-05:00", mod: { name: "Alu", img: "staff/modalu.jpeg", ig: "aluruizz_" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
-    4: { date: "2026-07-05T21:00:00-05:00", mod: { name: "Alu", img: "staff/modalu.jpeg", ig: "aluruizz_" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
+    4: { date: "2026-07-05T21:00:00-05:00", mod: { name: "Teo", img: "staff/modteo.jpeg", ig: "teoo__ff.mod" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
     5: { date: "2026-07-06T20:00:00-05:00", mod: { name: "Cesar", img: "staff/modcesar.jpeg", ig: "kmk._cesar.mod" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
     6: { date: "2026-07-06T21:00:00-05:00", mod: { name: "Cesar", img: "staff/modcesar.jpeg", ig: "kmk._cesar.mod" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
-    7: { date: "2026-07-07T20:00:00-05:00", mod: { name: "Eri", img: "staff/moderi.jpeg", ig: "" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
-    8: { date: "2026-07-07T21:00:00-05:00", mod: { name: "Eri", img: "staff/moderi.jpeg", ig: "" }, caster: { name: "", img: "staff/.jpeg", ig: "" } }
+    7: { date: "2026-07-07T20:00:00-05:00", mod: { name: "Eri", img: "staff/moderi.jpeg", ig: "moroff_" }, caster: { name: "Nikki", img: "staff/.jpeg", ig: "nikki30.ff" } },
+    8: { date: "2026-07-07T21:00:00-05:00", mod: { name: "Eri", img: "staff/moderi.jpeg", ig: "moroff_" }, caster: { name: "Nikki", img: "staff/.jpeg", ig: "nikki30.ff" } }
 };
 
 let countdownInterval = null;
@@ -131,7 +131,11 @@ function renderGroup(groupNum, activeBtn = null) {
     tableContainer.innerHTML = '';
 
     const teams = tournamentData[groupNum] || [];
-    teams.forEach((team, index) => {
+    
+    // ORDENAR LOS EQUIPOS DE MAYOR A MENOR SEGÚN SUS PUNTOS
+    const sortedTeams = [...teams].sort((a, b) => b.points - a.points);
+
+    sortedTeams.forEach((team, index) => {
         const rank = index + 1;
         const isEliminated = rank > 6 ? 'eliminated' : 'qualified';
 
