@@ -75,8 +75,8 @@ const playerImages = {
 const groupScheduleAndStaff = {
     1: { date: "2026-07-04T20:00:00-05:00", mod: { name: "Caleb", img: "staff/modcaleb.jpeg", ig: "desing_paton" }, caster: { name: "Dana", img: "staff/casterdana.jpeg", ig: "mod_dxnx.23" } },
     2: { date: "2026-07-04T21:00:00-05:00", mod: { name: "Caleb", img: "staff/modcaleb.jpeg", ig: "desing_paton" }, caster: { name: "Dana", img: "staff/casterdana.jpeg", ig: "mod_dxnx.23" } },
-    3: { date: "2026-07-05T20:00:00-05:00", mod: { name: "Alu", img: "staff/modalu.jpeg", ig: "aluruizz_" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
-    4: { date: "2026-07-05T21:00:00-05:00", mod: { name: "Teo", img: "staff/modteo.jpeg", ig: "teoo__ff.mod" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
+    3: { date: "2026-07-05T20:00:00-05:00", mod: { name: "Alu", img: "staff/modalu.jpeg", ig: "aluruizz_" }, caster: { name: "Linda", img: "staff/casterlinda.jpeg", ig: "linda_mc20" } },
+    4: { date: "2026-07-05T21:00:00-05:00", mod: { name: "Teo", img: "staff/modteo.jpeg", ig: "teoo__ff.mod" }, caster: { name: "Linda", img: "staff/casterlinda.jpeg", ig: "linda_mc20" } },
     5: { date: "2026-07-06T20:00:00-05:00", mod: { name: "Cesar", img: "staff/modcesar.jpeg", ig: "kmk._cesar.mod" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
     6: { date: "2026-07-06T21:00:00-05:00", mod: { name: "Cesar", img: "staff/modcesar.jpeg", ig: "kmk._cesar.mod" }, caster: { name: "", img: "staff/.jpeg", ig: "" } },
     7: { date: "2026-07-07T20:00:00-05:00", mod: { name: "Eri", img: "staff/moderi.jpeg", ig: "moroff_" }, caster: { name: "Nikki", img: "staff/.jpeg", ig: "nikki30.ff" } },
