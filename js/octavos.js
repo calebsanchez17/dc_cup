@@ -17,20 +17,20 @@ const tournamentData = {
         { name: "BR ESPORT", points: 24 }, { name: "TEAM KING", points: 5 }
     ],
     3: [
-        { name: "SAIYANS ESPORT", points: 0 }, { name: "B7 BEGIN", points: 0 },
-        { name: "VFT LEGIÓES", points: 0 }, { name: "SAVAGE ACD ESPORT", points: 0 },
-        { name: "CLAN XHILEE 65", points: 0 }, { name: "ROOSTER INVADING", points: 0 },
-        { name: "CLAN VISIONBULLS", points: 0 }, { name: "ESPORT GROUND ZERO 9", points: 0 },
-        { name: "CLAN RFW ESPORTS", points: 0 }, { name: "CLAN DARK GODS", points: 0 },
-        { name: "ROOSTER FEM DC", points: 0 }, { name: "SAMURAI", points: 0 }
+        { name: "SAIYANS ESPORT", points: 36 }, { name: "B7 BEGIN", points: 40 },
+        { name: "VFT LEGIÓES", points: 11 }, { name: "SAVAGE ACD ESPORT", points: 16 },
+        { name: "CLAN XHILEE 65", points: 19 }, { name: "ROOSTER INVADING", points: 35 },
+        { name: "CLAN VISIONBULLS", points: 9 }, { name: "ESPORT GROUND ZERO 9", points: 19 },
+        { name: "CLAN RFW ESPORTS", points: 24 }, { name: "CLAN DARK GODS", points: 46 },
+        { name: "ROOSTER FEM DC", points: 33 }, { name: "SAMURAI", points: 79 }
     ],
     4: [
-        { name: "SOLARIS ESPORT", points: 0 }, { name: "RX7 ESPORTS", points: 0 },
-        { name: "DC ESPORT RED", points: 0 }, { name: "RNS ESPORTS", points: 0 },
-        { name: "B7 ESPORT", points: 0 }, { name: "32 ESPORT", points: 0 },
-        { name: "VIOLAᵛᶫCLAN", points: 0 }, { name: "NOVA REVELLION ESPORTS", points: 0 },
-        { name: "LX SPORT", points: 0 }, { name: "AG STORM ESPORT", points: 0 },
-        { name: "CLAN VIRUS", points: 0 }, { name: "BIOHAZARD ESPORTS", points: 0 }
+        { name: "SOLARIS ESPORT", points: 0 }, { name: "RX7 ESPORTS", points: 18 },
+        { name: "DC ESPORT RED", points: 26 }, { name: "RNS ESPORTS", points: 26 },
+        { name: "B7 ESPORT", points: 49 }, { name: "32 ESPORT", points: 28 },
+        { name: "VIOLAᵛᶫCLAN", points: 14 }, { name: "NOVA REVELLION ESPORTS", points: 7 },
+        { name: "LX SPORT", points: 0 }, { name: "AG STORM ESPORT", points: 73 },
+        { name: "LOSP40", points: 25 }, { name: "BIOHAZARD ESPORTS", points: 26 }
     ],
     5: [
         { name: "LOS VAGOS", points: 0 }, { name: "RRG ESPORT", points: 0 },
@@ -46,13 +46,13 @@ const tournamentData = {
         { name: "SAVAGE ESPORT", points: 0 }, { name: "CLAN TS BÉLICOS", points: 0 },
         { name: "CLAN WONKRU", points: 0 }, { name: "BLΛCK FURY", points: 0 },
         { name: "TEAM TX", points: 0 }, { name: "SAMURAI", points: 0 },
-        { name: "DC ESPORT RED", points: 0 }, { name: "ESPORT GROUND ZERO 9", points: 0 }
+        { name: "ROOSTER FEM DC", points: 0 }, { name: "ESPORT GROUND ZERO 9", points: 0 }
     ],
     7: [
         { name: "TEAM KING", points: 0 }, { name: "CLAN CARTEL 23!", points: 0 },
         { name: "CLAN DARK BLOOD", points: 0 }, { name: "URU TEAM", points: 0 },
         { name: "DARK KING", points: 0 }, { name: "GA! ESPORT", points: 0 },
-        { name: "ROOSTER FEM DC", points: 0 }, { name: "CLAN SLNT〆KLRS", points: 0 },
+        { name: "DC ESPORT RED", points: 0 }, { name: "CLAN SLNT〆KLRS", points: 0 },
         { name: "ESPORT NR ", points: 0 }, { name: "ESPORT BLK BLACK", points: 0 },
         { name: "SHINKARU GG ESPORT", points: 0 }, { name: "CLAN TUCU OFICIAL", points: 0 }
     ],
