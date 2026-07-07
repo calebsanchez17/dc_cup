@@ -46,13 +46,13 @@ const tournamentData = {
         { name: "SAVAGE ESPORT", points: 0 }, { name: "CLAN TS BÉLICOS", points: 31 },
         { name: "CLAN WONKRU", points: 24 }, { name: "BLΛCK FURY", points: 32 },
         { name: "TEAM TX", points: 18 }, { name: "SAMURAI", points: 56 },
-        { name: "ROOSTER FEM DC", points: 40 }, { name: "ESPORT GROUND ZERO 9", points: 4 }
+        { name: "DC ESPORT RED", points: 40 }, { name: "ESPORT GROUND ZERO 9", points: 4 }
     ],
     7: [
         { name: "TEAM KING", points: 0 }, { name: "CLAN CARTEL 23!", points: 0 },
         { name: "CLAN DARK BLOOD", points: 0 }, { name: "URU TEAM", points: 0 },
         { name: "DARK KING", points: 0 }, { name: "GA! ESPORT", points: 0 },
-        { name: "DC ESPORT RED", points: 0 }, { name: "CLAN SLNT〆KLRS", points: 0 },
+        { name: "ROOSTER FEM DC", points: 0 }, { name: "CLAN SLNT〆KLRS", points: 0 },
         { name: "ESPORT NR ", points: 0 }, { name: "ESPORT BLK BLACK", points: 0 },
         { name: "SHINKARU GG ESPORT", points: 0 }, { name: "CLAN TUCU OFICIAL", points: 0 }
     ],
