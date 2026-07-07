@@ -33,20 +33,20 @@ const tournamentData = {
         { name: "LOSP40", points: 25 }, { name: "BIOHAZARD ESPORTS", points: 26 }
     ],
     5: [
-        { name: "LOS VAGOS", points: 0 }, { name: "RRG ESPORT", points: 0 },
-        { name: "F7 E-SPORT", points: 0 }, { name: "TEAM WACHINGTON", points: 0 },
-        { name: "DC ESPORT BLACK", points: 0 }, { name: "BIOHAZARD ESPORTS", points: 0 },
-        { name: "CLAN LEVELING UP", points: 0 }, { name: "ESPORT HLP", points: 0 },
-        { name: "TEAM L3P", points: 0 }, { name: "LIFE REWORK", points: 0 },
-        { name: "TEAM BOSS STAR", points: 0 }, { name: "RX7 ESPORT", points: 0 }
+        { name: "LOS VAGOS", points: 26 }, { name: "TEAM L3P", points: 23 },
+        { name: "F7 E-SPORT", points: 62 }, { name: "TEAM WACHINGTON", points: 21 },
+        { name: "DC ESPORT BLACK", points: 21 }, { name: "BIOHAZARD ESPORTS", points: 16 },
+        { name: "CLAN LEVELING UP", points: 25 }, { name: "ESPORT HLP", points: 39 },
+        { name: "RRG ESPORT", points: 23 }, { name: "LIFE REWORK", points: 28 },
+        { name: "TEAM BOSS STAR", points: 0 }, { name: "RX7 ESPORT", points: 23 }
     ],
     6: [
-        { name: "DRAGÓN Z", points: 0 }, { name: "CLAN KMK GAMING", points: 0 },
-        { name: "FURY E-SPORT", points: 0 }, { name: "CLAN LEGIONMURSI", points: 0 },
-        { name: "SAVAGE ESPORT", points: 0 }, { name: "CLAN TS BÉLICOS", points: 0 },
-        { name: "CLAN WONKRU", points: 0 }, { name: "BLΛCK FURY", points: 0 },
-        { name: "TEAM TX", points: 0 }, { name: "SAMURAI", points: 0 },
-        { name: "ROOSTER FEM DC", points: 0 }, { name: "ESPORT GROUND ZERO 9", points: 0 }
+        { name: "DRAGÓN Z", points: 31 }, { name: "CLAN KMK GAMING", points: 15 },
+        { name: "FURY E-SPORT", points: 0 }, { name: "CLAN LEGIONMURSI", points: 17 },
+        { name: "SAVAGE ESPORT", points: 0 }, { name: "CLAN TS BÉLICOS", points: 31 },
+        { name: "CLAN WONKRU", points: 24 }, { name: "BLΛCK FURY", points: 32 },
+        { name: "TEAM TX", points: 18 }, { name: "SAMURAI", points: 56 },
+        { name: "ROOSTER FEM DC", points: 40 }, { name: "ESPORT GROUND ZERO 9", points: 4 }
     ],
     7: [
         { name: "TEAM KING", points: 0 }, { name: "CLAN CARTEL 23!", points: 0 },
