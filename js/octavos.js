@@ -44,25 +44,25 @@ const tournamentData = {
         { name: "DRAGÓN Z", points: 31 }, { name: "CLAN KMK GAMING", points: 15 },
         { name: "FURY E-SPORT", points: 0 }, { name: "CLAN LEGIONMURSI", points: 17 },
         { name: "SAVAGE ESPORT", points: 0 }, { name: "CLAN TS BÉLICOS", points: 31 },
-        { name: "CLAN WONKRU", points: 24 }, { name: "BLΛCK FURY", points: 32 },
+        { name: "CLAN WONKRU", points: 29 }, { name: "BLΛCK FURY", points: 32 },
         { name: "TEAM TX", points: 18 }, { name: "SAMURAI", points: 56 },
         { name: "DC ESPORT RED", points: 40 }, { name: "ESPORT GROUND ZERO 9", points: 4 }
     ],
     7: [
-        { name: "TEAM KING", points: 0 }, { name: "CLAN CARTEL 23!", points: 0 },
-        { name: "CLAN DARK BLOOD", points: 0 }, { name: "URU TEAM", points: 0 },
-        { name: "DARK KING", points: 0 }, { name: "GA! ESPORT", points: 0 },
-        { name: "ROOSTER FEM DC", points: 0 }, { name: "CLAN SLNT〆KLRS", points: 0 },
-        { name: "ESPORT NR ", points: 0 }, { name: "ESPORT BLK BLACK", points: 0 },
-        { name: "SHINKARU GG ESPORT", points: 0 }, { name: "CLAN TUCU OFICIAL", points: 0 }
+        { name: "TEAM KING", points: 26 }, { name: "CLAN CARTEL 23!", points: 50 },
+        { name: "CLAN DARK BLOOD", points: 11 }, { name: "URU TEAM", points: 7 },
+        { name: "DARK KING", points: 27 }, { name: "GA! ESPORT", points: 40 },
+        { name: "ROOSTER FEM DC", points: 17 }, { name: "RANK FLOW ESPORT", points: 27 },
+        { name: "ESPORT NR ", points: 0 }, { name: "ESPORT BLK BLACK", points: 46 },
+        { name: "SHINKARU GG ESPORT", points: 6 }, { name: "ESPORT ZENITH", points: 35 }
     ],
     8: [
-        { name: "MONKEY SQUAD", points: 0 }, { name: "GHOST DEMONDS", points: 0 },
-        { name: "CLAN WE ARE", points: 0 }, { name: "TEAM SAVAGE", points: 0 },
-        { name: "TEAM 04", points: 0 }, { name: "CLAN W$N", points: 0 },
-        { name: "TEAM SANTOSGANG", points: 0 }, { name: "INFIERNO POLAR ESPORT", points: 0 },
-        { name: "DC ESPORT BLACK", points: 0 }, { name: "DYNEX ESPORT", points: 0 },
-        { name: "MNS ESPORT", points: 0 }, { name: "V9 ESPORT", points: 0 }
+        { name: "MONKEY SQUAD", points: 2 }, { name: "GHOST DEMONDS", points: 38 },
+        { name: "CLAN WE ARE", points: 25 }, { name: "TEAM SAVAGE", points: 22 },
+        { name: "TEAM 04", points: 50 }, { name: "CLAN W$N", points: 20 },
+        { name: "TEAM SANTOSGANG", points: 38 }, { name: "INFIERNO POLAR ESPORT", points: 9 },
+        { name: "DC ESPORT BLACK", points: 18 }, { name: "DYNEX ESPORT", points: 17 },
+        { name: "MNS ESPORT", points: 13 }, { name: "V9 ESPORT", points: 39 }
     ]
 };
 
