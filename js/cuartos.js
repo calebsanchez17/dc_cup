@@ -44,12 +44,12 @@ const playerImages = {
 // Horarios exactos en GMT-05:00 (Hora de Perú)
 const groupScheduleAndStaff = {
     // SÁBADO
-    1: { date: "2026-07-11T18:00:00-05:00", mod: { name: "", img: "staff/", ig: "" }, caster: { name: "", img: "staff/", ig: "" } }, // 7:00 PM
-    2: { date: "2026-07-11T22:00:00-05:00", mod: { name: "", img: "staff/", ig: "" }, caster: { name: "", img: "", ig: "" } }, // 9:00 PM
+    1: { date: "2026-07-11T19:00:00-05:00", mod: { name: "Caleb", img: "staff/modcaleb.jpeg", ig: "desing_paton" }, caster: { name: "Nikki", img: "staff/", ig: "nikki30.ff" } }, // 7:00 PM
+    2: { date: "2026-07-11T22:00:00-05:00", mod: { name: "Cesar", img: "staff/modcesar.jpeg", ig: "kmk._cesar.mod" }, caster: { name: "Danna", img: "staff/casterdana.jpeg", ig: "mod_dxnx.23" } }, // 9:00 PM
     
     // DOMINGO
-    3: { date: "2026-07-12T19:00:00-05:00", mod: { name: "", img: "staff/", ig: "" }, caster: { name: "", img: "staff/", ig: "" } }, // 7:00 PM
-    4: { date: "2026-07-12T21:00:00-05:00", mod: { name: "", img: "staff/", ig: "" }, caster: { name: "", img: "staff/", ig: "" } }  // 9:00 PM
+    3: { date: "2026-07-12T19:00:00-05:00", mod: { name: "Eri", img: "staff/moderi.jpeg", ig: "moroff_" }, caster: { name: "", img: "staff/", ig: "" } }, // 7:00 PM
+    4: { date: "2026-07-12T21:00:00-05:00", mod: { name: "Teo", img: "staff/modteo.jpeg", ig: "teoo__ff.mod" }, caster: { name: "", img: "staff/", ig: "" } }  // 9:00 PM
 };
 
 let countdownInterval = null;

@@ -1,6 +1,6 @@
 // Establece la fecha de inicio del torneo: 04 de Julio de 2026 a las 8:00 PM (Hora Perú / GMT-5)
 // Usamos el formato ISO para asegurar que la zona horaria sea siempre la correcta sin importar el país del visitante
-const tournamentDate = new Date("2026-07-04T20:00:00-05:00").getTime();
+const tournamentDate = new Date("2026-07-11T19:00:00-05:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
