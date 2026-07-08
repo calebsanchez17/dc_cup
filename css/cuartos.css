@@ -1,48 +1,151 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Oswald', sans-serif; }
+/* =========================================
+   1. ESTILOS GLOBALES Y FONDO
+========================================= */
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+    font-family: 'Oswald', sans-serif; 
+}
 
 body { 
-    background-color: #0a0a0a;
-    background-image: radial-gradient(circle at center, #1a0000 0%, #000000 100%);
-    color: white; 
-    min-height: 100vh; 
+    background-color: #050505;
+    background-image: linear-gradient(rgba(7, 16, 29, 0.85), rgba(7, 16, 29, 0.95)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070'); 
+    background-size: cover; background-position: center; background-attachment: fixed;
+    color: white; min-height: 100vh; overflow-x: hidden; 
 }
 
-.top-nav { padding: 20px; background: rgba(0,0,0,0.5); border-bottom: 1px solid #333; }
-.back-btn { color: white; text-decoration: none; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+/* =========================================
+   2. NAVEGACIÓN Y CABECERA
+========================================= */
+.group-nav { 
+    padding: 15px 20px; display: flex; align-items: center; 
+    background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
+    border-bottom: 2px solid #ff0000; box-shadow: 0 4px 15px rgba(255,0,0,0.2); 
+    position: sticky; top: 0; z-index: 100;
+}
+
+.back-btn { color: white; text-decoration: none; font-size: 1.2rem; margin-right: 20px; transition: 0.3s; white-space: nowrap; }
 .back-btn:hover { color: #ff0000; }
 
-.cuartos-container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+.group-buttons { display: flex; overflow-x: auto; white-space: nowrap; width: 100%; gap: 10px; padding-bottom: 5px; }
+.group-buttons::-webkit-scrollbar { height: 0px; }
 
-.header-cuartos { margin-bottom: 60px; }
-.header-cuartos h1 { font-size: 5rem; color: #fff; text-transform: uppercase; letter-spacing: 3px; line-height: 1; text-shadow: 0 0 20px rgba(255,0,0,0.5); }
-.subtitle-cuartos { font-size: 2rem; color: #ff0000; font-weight: bold; letter-spacing: 2px; margin-top: 10px; }
-
-.groups-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-
-.group-card {
-    background: linear-gradient(145deg, #111, #0a0a0a);
-    border: 2px solid #333;
-    border-radius: 10px;
-    padding: 40px 20px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+.group-buttons button { 
+    background: rgba(255,255,255,0.05); color: white; border: 1px solid #333; 
+    padding: 8px 20px; cursor: pointer; font-size: 1rem; border-radius: 4px; transition: 0.3s; 
+}
+.group-buttons button.active, .group-buttons button:hover { 
+    background: #ff0000; border-color: #ff0000; font-weight: bold; box-shadow: 0 0 10px rgba(255,0,0,0.5); 
 }
 
-.group-card:hover { border-color: #ff0000; transform: translateY(-10px); box-shadow: 0 15px 30px rgba(255,0,0,0.15); }
+.header-container { display: flex; flex-direction: column; align-items: center; justify-content: space-between; max-width: 1400px; margin: 20px auto 0; padding: 0 20px; gap: 20px; }
+@media (min-width: 900px) { .header-container { flex-direction: row; align-items: flex-end; } .title-block { text-align: left; } }
+.title-block { text-align: center; }
+.group-title { font-size: 2.5rem; color: #fff; margin-bottom: -10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+.table-subtitle { font-size: clamp(3rem, 5vw, 4.5rem); color: #ff0000; text-transform: uppercase; line-height: 1; text-shadow: 0 0 15px rgba(255,0,0,0.4); }
 
-.group-card h2 { font-size: 2.5rem; color: #d4af37; margin-bottom: 20px; }
-.group-card .slots { color: #aaa; margin-bottom: 30px; }
-.group-card .slots p { font-size: 1.2rem; }
-.group-card .slots span { display: inline-block; background: #222; padding: 5px 15px; border-radius: 20px; margin-top: 10px; font-weight: bold; }
+.countdown-box { background: rgba(17, 17, 19, 0.7); backdrop-filter: blur(8px); border: 1px solid #333; border-radius: 12px; padding: 15px 25px; text-align: center; width: 100%; max-width: 420px; position: relative; overflow: hidden; }
+.countdown-box::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background-color: #ff0000; }
+.countdown-label { color: #9ca3af; font-size: 14px; letter-spacing: 2px; margin-bottom: 10px; font-weight: bold; }
+.countdown-timer { display: flex; justify-content: space-around; }
+.timer-segment { display: flex; flex-direction: column; align-items: center; }
+.timer-segment span:first-child { font-family: 'Teko', sans-serif; font-size: 3.5rem; font-weight: 700; color: #eab308; text-shadow: 0 0 15px rgba(234, 179, 8, 0.6); line-height: 1; }
+.segment-label { font-size: 12px; color: #fff; margin-top: 5px; letter-spacing: 1px; }
 
-.status {
-    background: rgba(255, 0, 0, 0.1);
-    color: #ff0000;
-    border: 1px solid #ff0000;
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+/* =========================================
+   3. CONTENEDOR PRINCIPAL Y STAFF
+========================================= */
+.cuartos-container { display: flex; max-width: 1400px; margin: 0 auto; padding: 20px; gap: 40px; }
+.left-column { flex: 1; display: flex; flex-direction: column; gap: 30px; justify-content: flex-end; }
+.player-showcase { position: relative; display: flex; align-items: flex-end; justify-content: center; }
+.player-png { width: 100%; max-width: 500px; object-fit: contain; filter: drop-shadow(0px 0px 30px rgba(255, 0, 0, 0.6)); z-index: 2; }
+
+.staff-showcase { display: grid; grid-template-columns: 1fr; gap: 15px; z-index: 3; }
+@media (min-width: 1200px) { .staff-showcase { grid-template-columns: 1fr 1fr; } }
+.staff-card { background: rgba(20, 20, 22, 0.8); backdrop-filter: blur(5px); border: 1px solid #333; border-radius: 12px; padding: 15px; display: flex; align-items: center; gap: 15px; transition: 0.3s; }
+.card-mod:hover { border-color: #ff0000; box-shadow: 0 0 15px rgba(255,0,0,0.3); transform: translateY(-3px); }
+.card-caster:hover { border-color: #eab308; box-shadow: 0 0 15px rgba(234,179,8,0.3); transform: translateY(-3px); }
+.staff-avatar { width: 65px; height: 65px; border-radius: 50%; object-fit: cover; }
+.card-mod .staff-avatar { border: 2px solid #ff0000; }
+.card-caster .staff-avatar { border: 2px solid #eab308; }
+.staff-info { display: flex; flex-direction: column; }
+.staff-role { font-size: 11px; font-weight: bold; letter-spacing: 1px; }
+.role-mod { color: #ff0000; }
+.role-caster { color: #eab308; }
+.staff-name { font-size: 1.2rem; margin: 2px 0; color: white; text-transform: uppercase; }
+.staff-ig { font-family: sans-serif; font-size: 12px; color: #9ca3af; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: 0.2s; }
+.staff-ig i { color: #ec4899; font-size: 14px; }
+.staff-ig:hover { color: white; }
+
+/* =========================================
+   4. TABLAS DE GRUPO Y GENERAL
+========================================= */
+.table-showcase { flex: 1.2; z-index: 3; display: flex; flex-direction: column; justify-content: center; }
+.standings-table, .general-standings-table { display: flex; flex-direction: column; gap: 6px; width: 100%; max-width: 600px; margin: 0 auto;}
+
+.team-row { 
+    display: flex; align-items: center; border-radius: 6px; overflow: hidden; 
+    height: 42px; font-weight: bold; transition: 0.2s;
+}
+.team-row:hover { transform: scale(1.02); }
+
+/* Estilos de Clasificados (Dorado) y Eliminados (Oscuro) */
+.team-row.qualified { background: linear-gradient(90deg, #ffffff 0%, #d4af37 100%); color: black; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+.team-row.eliminated { background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 100%); color: #9ca3af; border: 1px solid #444; }
+
+.rank { width: 45px; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; background: #000; color: #d4af37; }
+.team-row.eliminated .rank { color: #777; }
+.name { flex: 1; text-transform: uppercase; font-size: 1.1rem; padding-left: 15px; display: flex; align-items: center; justify-content: space-between; padding-right: 15px;}
+.points { background: #000; color: #d4af37; padding: 0 20px; height: 100%; display: flex; align-items: center; font-size: 1.3rem; font-weight: bold; }
+.team-row.eliminated .points { color: #9ca3af; }
+
+/* Etiquetas de Grupo en la Tabla General */
+.group-tag { font-size: 0.8rem; background: rgba(0,0,0,0.5); padding: 2px 8px; border-radius: 4px; color: #fff; border: 1px solid #555;}
+.team-row.qualified .group-tag { background: #000; color: #d4af37; border-color: #d4af37;}
+
+.fade-in { animation: imageFadeIn 0.4s ease-out forwards; }
+@keyframes imageFadeIn { 0% { opacity: 0; transform: translateY(15px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* =========================================
+   5. SECCIÓN TABLA GENERAL (NUEVO)
+========================================= */
+.section-divider { border: none; height: 2px; background: linear-gradient(90deg, transparent, #ff0000, transparent); margin: 40px auto; max-width: 80%; }
+
+.general-table-section { max-width: 1400px; margin: 0 auto 60px; padding: 0 20px; text-align: center; }
+.general-header { margin-bottom: 25px; }
+.general-title { font-size: 3rem; color: #eab308; text-shadow: 0 0 15px rgba(234, 179, 8, 0.4); margin-bottom: -5px; }
+.general-subtitle { color: #fff; font-size: 1.2rem; letter-spacing: 2px; }
+
+/* Contenedor con Scroll VIP para los 48 equipos */
+.general-table-wrapper {
+    background: rgba(10, 10, 12, 0.8); backdrop-filter: blur(10px);
+    border: 1px solid #333; border-radius: 12px;
+    padding: 20px; max-height: 600px; overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 800px; margin: 0 auto;
+}
+
+/* Scrollbar Personalizado */
+.general-table-wrapper::-webkit-scrollbar { width: 8px; }
+.general-table-wrapper::-webkit-scrollbar-track { background: #1a1a1a; border-radius: 10px; }
+.general-table-wrapper::-webkit-scrollbar-thumb { background: #eab308; border-radius: 10px; }
+.general-table-wrapper::-webkit-scrollbar-thumb:hover { background: #ff0000; }
+
+.general-standings-table { max-width: 100%; }
+
+/* =========================================
+   6. RESPONSIVE
+========================================= */
+@media (max-width: 900px) {
+    .cuartos-container { flex-direction: column; padding: 20px 10px; gap: 20px; }
+    .player-showcase { display: none; }
+    .staff-showcase { grid-template-columns: 1fr; margin-bottom: 20px; }
+    .table-showcase { width: 100%; align-items: center; }
+    .standings-table, .general-table-wrapper { max-width: 100%; }
+    .name { font-size: 0.9rem; padding-left: 10px; }
+    .points { padding: 0 15px; font-size: 1.1rem; }
+    .rank { width: 35px; font-size: 1rem; }
+}
+@media (max-width: 480px) {
+    .timer-segment span:first-child { font-size: 2.5rem; }
+    .general-title { font-size: 2.2rem; }
 }

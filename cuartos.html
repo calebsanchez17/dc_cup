@@ -3,58 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuartos de Final - DC CUP</title>
+    <title>Cuartos de Final - Torneo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/cuartos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="top-nav">
-        <a href="index.html" class="back-btn">← Volver al Menú</a>
+
+    <nav class="group-nav">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> VOLVER</a>
+        <div class="group-buttons" id="groupButtons">
+            </div>
     </nav>
 
-    <div class="cuartos-container">
-        <div class="header-cuartos">
-            <h1>CUARTOS DE FINAL</h1>
-            <p class="subtitle-cuartos">48 EQUIPOS CLASIFICADOS</p>
+    <header class="header-container">
+        <div class="title-block">
+            <h2 class="group-title">CUARTOS DE FINAL</h2>
+            <h1 class="table-subtitle">GRUPO <span id="currentGroupNum">1</span></h1>
         </div>
+        
+        <div class="countdown-box">
+            <div class="countdown-label">INICIO DE PARTIDA</div>
+            <div class="countdown-timer" id="countdown">
+                <div class="timer-segment"><span id="days">00</span><span class="segment-label">DÍAS</span></div>
+                <div class="timer-segment"><span id="hours">00</span><span class="segment-label">HORAS</span></div>
+                <div class="timer-segment"><span id="mins">00</span><span class="segment-label">MIN</span></div>
+                <div class="timer-segment"><span id="secs">00</span><span class="segment-label">SEG</span></div>
+            </div>
+        </div>
+    </header>
 
-        <div class="groups-grid">
-            <div class="group-card">
-                <h2>GRUPO I</h2>
-                <div class="slots">
-                    <p>Clasificados Grupo 1 y 2</p>
-                    <span>12 Equipos</span>
-                </div>
-                <div class="status">PRÓXIMAMENTE</div>
+    <main class="cuartos-container">
+        <div class="left-column">
+            <div class="player-showcase">
+                <img id="playerImage" src="assets/cuartos-g1.png" alt="Jugador Destacado" class="player-png fade-in">
             </div>
             
-            <div class="group-card">
-                <h2>GRUPO J</h2>
-                <div class="slots">
-                    <p>Clasificados Grupo 3 y 4</p>
-                    <span>12 Equipos</span>
+            <div class="staff-showcase">
+                <div class="staff-card card-mod">
+                    <img id="modImage" src="staff/default.jpeg" alt="Moderador" class="staff-avatar">
+                    <div class="staff-info">
+                        <span class="staff-role role-mod">MODERADOR</span>
+                        <h4 id="modName" class="staff-name">Cargando...</h4>
+                        <a id="modInstagram" href="#" target="_blank" class="staff-ig"><i class="fab fa-instagram"></i> @instagram</a>
+                    </div>
                 </div>
-                <div class="status">PRÓXIMAMENTE</div>
-            </div>
-
-            <div class="group-card">
-                <h2>GRUPO K</h2>
-                <div class="slots">
-                    <p>Clasificados Grupo 5 y 6</p>
-                    <span>12 Equipos</span>
+                <div class="staff-card card-caster">
+                    <img id="casterImage" src="staff/default.jpeg" alt="Caster" class="staff-avatar">
+                    <div class="staff-info">
+                        <span class="staff-role role-caster">CASTER</span>
+                        <h4 id="casterName" class="staff-name">Cargando...</h4>
+                        <a id="casterInstagram" href="#" target="_blank" class="staff-ig"><i class="fab fa-instagram"></i> @instagram</a>
+                    </div>
                 </div>
-                <div class="status">PRÓXIMAMENTE</div>
-            </div>
-
-            <div class="group-card">
-                <h2>GRUPO L</h2>
-                <div class="slots">
-                    <p>Clasificados Grupo 7 y 8</p>
-                    <span>12 Equipos</span>
-                </div>
-                <div class="status">PRÓXIMAMENTE</div>
             </div>
         </div>
-    </div>
+
+        <div class="table-showcase">
+            <div class="standings-table" id="standingsTable">
+                </div>
+        </div>
+    </main>
+
+    <hr class="section-divider">
+
+    <section class="general-table-section">
+        <div class="general-header">
+            <h2 class="general-title">TABLA GENERAL</h2>
+            <p class="general-subtitle">LOS 18 MEJORES CLASIFICAN A LA SEMIFINAL</p>
+        </div>
+        
+        <div class="general-table-wrapper">
+            <div class="general-standings-table" id="generalTable">
+                </div>
+        </div>
+    </section>
+
+    <script src="js/cuartos.js"></script>
 </body>
 </html>
