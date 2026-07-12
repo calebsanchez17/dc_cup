@@ -1,20 +1,20 @@
 // Base de datos de Cuartos de Final (4 Grupos de 12 equipos = 48 equipos)
 const tournamentData = {
     1: [
-        { name: "RED RIOT GAMG", points: 0 }, { name: "TEAM 777", points: 0 },
-        { name: "B7 BEGIN", points: 0 }, { name: "DC ESPORT RED", points: 0 },
-        { name: "FURIUS LYNX SPORT", points: 0 }, { name: "CLAN CARTEL 23!", points: 0 },
-        { name: "V9 ESPORT", points: 0 }, { name: "DARK KING", points: 0 },
-        { name: "LOS VAGOS", points: 0 }, { name: "ESPORT HLP", points: 0 },
-        { name: "BLΛCK FURY", points: 0 }, { name: "TEAM SAVAGE", points: 0 }
+        { name: "RED RIOT GAMG", points: 9 }, { name: "TEAM 777", points: 72 },
+        { name: "B7 BEGIN", points: 18 }, { name: "DC ESPORT RED", points: 34 },
+        { name: "FURIUS LYNX SPORT", points: 50 }, { name: "CLAN CARTEL 23!", points: 43 },
+        { name: "V9 ESPORT", points: 67 }, { name: "DARK KING", points: 7 },
+        { name: "LOS VAGOS", points: 0 }, { name: "ESPORT HLP", points: 86 },
+        { name: "BLΛCK FURY", points: 30 }, { name: "TEAM SAVAGE", points: 2 }
     ],
     2: [
-        { name: "SAMURAI", points: 0 }, { name: "32 ESPORT", points: 0 },
-        { name: "BR ESPORT", points: 0 }, { name: "GSX ESPORT", points: 0 },
-        { name: "TEAM 04", points: 0 }, { name: "BIOHAZARD ESPORTS", points: 0 },
-        { name: "DC ESPORT RED", points: 0 }, { name: "GHOST DEMONDS", points: 0 },
-        { name: "GA! ESPORT", points: 0 }, { name: "LIFE REWORK", points: 0 },
-        { name: "CLAN LEVELING UP", points: 0 }, { name: "DRAGÓN Z", points: 0 }
+        { name: "SAMURAI", points: 18 }, { name: "32 ESPORT", points: 38 },
+        { name: "BR ESPORT", points: 57 }, { name: "GSX ESPORT", points: 22 },
+        { name: "TEAM 04", points: 45 }, { name: "BIOHAZARD ESPORTS", points: 52 },
+        { name: "DC ESPORT RED", points: 29 }, { name: "GHOST DEMONDS", points: 40 },
+        { name: "GA! ESPORT", points: 30 }, { name: "LIFE REWORK", points: 10 },
+        { name: "CLAN LEVELING UP", points: 46 }, { name: "DRAGÓN Z", points: 16 }
     ],
     3: [
         { name: "TEAM CRAZY RABBITS", points: 0 }, { name: "B7 ESPORT", points: 0 },
@@ -35,11 +35,10 @@ const tournamentData = {
 };
 
 const playerImages = {
-    1: "assets/cuartos-g1.png", 2: "assets/cuartos-g2.png", 
+    1: "assets/grupo1.png", 2: "assets/cuartos-g2.png", 
     3: "assets/cuartos-g3.png", 4: "assets/cuartos-g4.png"
 };
 
-// Configuración de Staff (Ajustado para Cuartos de Final)
 // Configuración de Staff y Horarios (Ajustado para el fin de semana: Sábado 11 y Domingo 12 de Julio)
 // Horarios exactos en GMT-05:00 (Hora de Perú)
 const groupScheduleAndStaff = {
@@ -71,6 +70,21 @@ function generateGroupButtons() {
         btn.onclick = () => renderGroup(i, btn);
         container.appendChild(btn);
     }
+}
+
+// ----------------------------------------------------
+// NUEVA FUNCIÓN DE APOYO: OBTENER TABLA GENERAL ORDENADA
+// ----------------------------------------------------
+function getSortedGeneralStandings() {
+    let allTeams = [];
+    for (let i = 1; i <= 4; i++) {
+        const groupTeams = tournamentData[i].map(team => {
+            return { ...team, groupNumber: i };
+        });
+        allTeams = allTeams.concat(groupTeams);
+    }
+    // Ordenar de mayor a menor puntaje
+    return allTeams.sort((a, b) => b.points - a.points);
 }
 
 // Renderizar el Grupo seleccionado en la parte superior
@@ -113,16 +127,24 @@ function renderGroup(groupNum, activeBtn = null) {
     tableContainer.innerHTML = '';
 
     const teams = tournamentData[groupNum] || [];
-    const sortedTeams = [...teams].sort((a, b) => b.points - a.points);
+    const sortedGroupTeams = [...teams].sort((a, b) => b.points - a.points);
+    
+    // Obtenemos la tabla general para saber quiénes están en el TOP 18 global
+    const generalStandings = getSortedGeneralStandings();
 
-    // En la tabla de grupo, mostramos visualmente el top 6 como "clasificados" referenciales
-    sortedTeams.forEach((team, index) => {
-        const rank = index + 1;
-        const isEliminated = rank > 6 ? 'eliminated' : 'qualified';
+    sortedGroupTeams.forEach((team, index) => {
+        const groupRank = index + 1;
+        
+        // Buscamos la posición de ESTE equipo en la tabla general
+        const generalIndex = generalStandings.findIndex(t => t.name === team.name && t.groupNumber === groupNum);
+        const generalRank = generalIndex + 1; // Le sumamos 1 porque los arrays empiezan en 0
+
+        // Si su rango en la tabla general es 18 o menos, se pinta dorado (qualified), si no, oscuro (eliminated)
+        const isEliminated = generalRank > 18 ? 'eliminated' : 'qualified';
 
         tableContainer.innerHTML += `
             <div class="team-row ${isEliminated}">
-                <div class="rank">${rank}</div>
+                <div class="rank">${groupRank}</div>
                 <div class="name">${team.name}</div>
                 <div class="points">${team.points}</div>
             </div>
@@ -131,25 +153,15 @@ function renderGroup(groupNum, activeBtn = null) {
 }
 
 // ----------------------------------------------------
-// NUEVA FUNCIÓN: RENDERIZAR TABLA GENERAL (48 EQUIPOS)
+// RENDERIZAR TABLA GENERAL (48 EQUIPOS) EN LA PARTE INFERIOR
 // ----------------------------------------------------
 function renderGeneralTable() {
     const generalContainer = document.getElementById('generalTable');
     generalContainer.innerHTML = '';
 
-    // 1. Unir todos los equipos en un solo Array y agregarles de qué grupo vienen
-    let allTeams = [];
-    for (let i = 1; i <= 4; i++) {
-        const groupTeams = tournamentData[i].map(team => {
-            return { ...team, groupNumber: i };
-        });
-        allTeams = allTeams.concat(groupTeams);
-    }
+    const allTeams = getSortedGeneralStandings();
 
-    // 2. Ordenar de mayor a menor puntaje a los 48 equipos
-    allTeams.sort((a, b) => b.points - a.points);
-
-    // 3. Crear el HTML. Los primeros 18 clasifican a Semifinales.
+    // Los primeros 18 clasifican a Semifinales
     allTeams.forEach((team, index) => {
         const rank = index + 1;
         const isEliminated = rank > 18 ? 'eliminated' : 'qualified';
