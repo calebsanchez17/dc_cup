@@ -14,7 +14,7 @@ const tournamentData = {
         { name: "TEAM 04", points: 45 }, { name: "LOSP40", points: 52 },
         { name: "DC ESPORT RED", points: 29 }, { name: "GHOST DEMONDS", points: 40 },
         { name: "GA! ESPORT", points: 30 }, { name: "LIFE REWORK", points: 10 },
-        { name: "CLAN LEVELING UP", points: 46 }, { name: "DRAGÓN Z", points: 16 }
+        { name: "ROOSTER STARS", points: 46 }, { name: "DRAGÓN Z", points: 16 }
     ],
     3: [
         { name: "TEAM CRAZY RABBITS", points: 50 }, { name: "B7 ESPORT", points: 29 },
