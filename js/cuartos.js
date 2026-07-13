@@ -11,26 +11,26 @@ const tournamentData = {
     2: [
         { name: "SAMURAI", points: 18 }, { name: "32 ESPORT", points: 38 },
         { name: "BR ESPORT", points: 57 }, { name: "GSX ESPORT", points: 22 },
-        { name: "TEAM 04", points: 45 }, { name: "BIOHAZARD ESPORTS", points: 52 },
+        { name: "TEAM 04", points: 45 }, { name: "LOSP40", points: 52 },
         { name: "DC ESPORT RED", points: 29 }, { name: "GHOST DEMONDS", points: 40 },
         { name: "GA! ESPORT", points: 30 }, { name: "LIFE REWORK", points: 10 },
         { name: "CLAN LEVELING UP", points: 46 }, { name: "DRAGÓN Z", points: 16 }
     ],
     3: [
-        { name: "TEAM CRAZY RABBITS", points: 0 }, { name: "B7 ESPORT", points: 0 },
-        { name: "CLAN DARK GODS", points: 0 }, { name: "BR ESPORT", points: 0 },
-        { name: "V9 ESPORT", points: 0 }, { name: "F7 E-SPORT", points: 0 },
-        { name: "ESPORT ZENITH", points: 0 }, { name: "TEAM SANTOSGANG", points: 0 },
-        { name: "CLAN TS BÉLICOS", points: 0 }, { name: "RNS ESPORTS", points: 0 },
-        { name: "ROOSTER FEM DC", points: 0 }, { name: "RANK FLOW ESPORT", points: 0 }
+        { name: "TEAM CRAZY RABBITS", points: 50 }, { name: "B7 ESPORT", points: 29 },
+        { name: "CLAN DARK GODS", points: 36 }, { name: "BR ESPORT", points: 5 },
+        { name: "V9 ESPORT", points: 51 }, { name: "F7 E-SPORT", points: 56 },
+        { name: "ESPORT ZENITH", points: 64 }, { name: "TEAM SANTOSGANG", points: 29 },
+        { name: "CLAN TS BÉLICOS", points: 29 }, { name: "RNS ESPORTS", points: 39 },
+        { name: "ROOSTER FEM DC", points: 11 }, { name: "RANK FLOW ESPORT", points: 53 }
     ],
     4: [
-        { name: "AG STORM ESPORT", points: 0 }, { name: "SAMURAI", points: 0 },
-        { name: "DELTA ESPORT DIVISIÓN", points: 0 }, { name: "DC ESPORT RED", points: 0 },
-        { name: "ROOSTER INVADING", points: 0 }, { name: "TEAM DEVIANSTGANG", points: 0 },
-        { name: "TEAM SANTOSGANG", points: 0 }, { name: "ESPORT BLK BLACK", points: 0 },
-        { name: "SAIYANS ESPORT", points: 0 }, { name: "CLAN WE ARE", points: 0 },
-        { name: "CLAN WONKRU", points: 0 }, { name: "TEAM L3P", points: 0 }
+        { name: "AG STORM ESPORT", points: 69 }, { name: "SAMURAI", points: 63 },
+        { name: "DELTA ESPORT DIVISIÓN", points: 37 }, { name: "DC ESPORT RED", points: 58 },
+        { name: "ROOSTER INVADING", points: 10 }, { name: "TEAM DEVIANSTGANG", points: 38 },
+        { name: "TEAM SANTOSGANG", points: 12 }, { name: "ESPORT BLK BLACK", points: 27 },
+        { name: "SAIYANS ESPORT", points: 81 }, { name: "CLAN WE ARE", points: 25 },
+        { name: "CLAN WONKRU", points: 26 }, { name: "TEAM L3P", points: 14 }
     ]
 };
 
