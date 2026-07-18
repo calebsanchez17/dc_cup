@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Resultados - DC ESPORTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&family=Teko:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="css/semifinal.css">
+</head>
+<body>
+<a href="index.html" class="btn-regresar">
+    <i class="fas fa-arrow-left"></i> Regresar
+</a>
+    <!-- BARRA DE CONTROL SUPERIOR (DASHBOARD) -->
+    <header class="app-header">
+        <div class="header-titles">
+            <h1><i class="fas fa-satellite-dish"></i> FASE SEMIFINAL</h1>
+            <p></p>
+        </div>
+        <div class="header-actions">
+            <button class="btn-export" onclick="downloadImage('board-table', 'Tabla_Resultados.png')">
+                <i class="fas fa-download"></i> DESCARGAR TABLA
+            </button>
+            <button class="btn-export" onclick="downloadImage('board-recap', 'Booyah_Recap.png')">
+                <i class="fas fa-download"></i> DESCARGAR BOOYAH
+            </button>
+        </div>
+    </header>
+
+    <!-- ÁREA DE VISUALIZACIÓN (PREVIEW) -->
+    <main class="preview-area">
+        
+        <!-- ========================================== -->
+        <!-- LIENZO 1: TABLA GENERAL (1080x1920)        -->
+        <!-- ========================================== -->
+        <div class="canvas-wrapper">
+            <div id="board-table" class="ig-canvas bg-red-pattern">
+                
+                <div class="top-logos center-logos">
+                    <div class="logo-text">DC CUP EDICIÓN 1</div>
+                    <div class="slash">//</div>
+                    <div class="logo-text">SEMIFINAL</div>
+                </div>
+
+                <div class="ig-header center-text">
+                    <h2 class="subtitle"></h2>
+                    <h1 class="title-massive">TABLA GENERAL</h1>
+                    <div class="badges-row justify-center">
+                        <div class="badge-black">FASE SEMIFINAL</div>
+                        <div class="badge-white">CLASIFICAN LOS 12 MEJORES</div>
+                    </div>
+                </div>
+
+                <!-- La tabla ahora es más ancha al no haber jugador -->
+                <div class="table-container wide-table" id="ig-table-body">
+                    <!-- SE LLENA CON JS -->
+                </div>
+
+                <div class="ig-footer">
+                    <div class="footer-info">
+                        <span class="yellow-text">PRÓXIMO MAPA:</span> GRAN FINAL<br>
+                        25 JULIO<br>
+                        EN VIVO
+                    </div>
+                    <div class="slogan">DC CUP</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- LIENZO 2: BOOYAH RECAP (1080x1920)         -->
+        <!-- ========================================== -->
+        <div class="canvas-wrapper">
+            <div id="board-recap" class="ig-canvas bg-red-dark">
+                
+                <div class="top-logos center-logos">
+                    <div class="logo-text">DC CUP EDICIÓN</div>
+                    <div class="slash">//</div>
+                    <div class="logo-text">SEMIFINAL</div>
+                </div>
+
+                <div class="ig-header center-text">
+                    <h1 class="title-massive">BOOYAH!</h1>
+                    <div class="badges-row justify-center" style="margin-top: 10px;">
+                        <div class="badge-black" style="font-size: 1.2rem;">FASE SEMIFINAL</div>
+                        <div class="badge-white" style="font-size: 1.2rem;">BOOYAH!</div>
+                    </div>
+                </div>
+
+                <!-- Recap más ancho y centrado -->
+                <div class="recap-container wide-recap" id="ig-recap-body">
+                    <!-- SE LLENA CON JS -->
+                </div>
+
+                <div class="ig-footer">
+                    <div class="footer-info">
+                        <span class="yellow-text">PRÓXIMO MAPA:</span> GRAN FINAL<br>
+                        25 JULIO<br>
+                        EN VIVO
+                    </div>
+                    <div class="slogan">DC CUP</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/semifinal.js"></script>
+</body>
+</html>

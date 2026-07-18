@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tabla-wrapper {
+    background-color: rgb(180, 3, 3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    border: 2px solid #e0e0e0;
+}
+
+/* --- ENCABEZADO --- */
+.main-header {
+    border: 4px solid black;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.title-predicciones {
+    text-align: center;
+    font-size: 6rem;
+    line-height: 1;
+    color: black;
+    background-color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+/* --- CONTENEDOR DE PREDICCIONES (FLEX COLUMNS) --- */
+.predicciones-container {
+    display: flex;
+    gap: 10px;
+}
+
+/* --- COLUMNA DE ETIQUETAS (IZQUIERDA) --- */
+.labels-col {
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    gap: 10px;
+    margin-top: 130px; /* Alineado para saltar la foto del perfil */
+}
+
+.label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.label.aciertos { height: 60px; background-color: #00d2ff; }
+.label.top3 { height: 260px; background-color: #4da6ff; }
+.label.kills { height: 80px; background-color: #ffd700; }
+.label.booyah { height: 80px; background-color: #ff3333; }
+
+/* --- COLUMNA DE JUGADORES --- */
+.player-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+/* --- CELDAS Y TARJETAS --- */
+.cell {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+    /* Recorte de esquinas estilo tech */
+    clip-path: polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%);
+}
+
+.cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Perfil (Cabecera de jugador) */
+.player-profile {
+    height: 120px;
+    background-color: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.player-profile .name {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+/* Aciertos */
+.score-cell {
+    height: 60px;
+    background-color: #8c8c8c;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Top 3, Kills, Booyah */
+.prediction-cell {
+    height: 80px;
+    background-color: #0d0d0d;
+    border: 2px solid #222;
+}
+
+/* Numeración del Top 3 */
+.pos-number {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+    color: black;
+    padding: 2px 8px;
+    font-weight: bold;
+    font-size: 12px;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+}
+
+/* Tarjeta +Kills especial */
+.kills-cell {
+    background-color: #1a1a1a;
+}
+.kills-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    padding: 2px 0;
+}
+
+.btn-regresar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #222; /* Fondo oscuro */
+    color: white;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid #444;
+    transition: all 0.3s ease;
+    margin: 20px; /* Ajusta según dónde lo coloques */
+}
+
+.btn-regresar:hover {
+    background-color: #ff0000; /* Se vuelve rojo al pasar el mouse */
+    border-color: #ff0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
