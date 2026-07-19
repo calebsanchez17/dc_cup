@@ -132,7 +132,7 @@ body { background: #080808; color: #fff; font-family: 'Montserrat', sans-serif; 
 }
 
 .recap-team-box { width: 22%; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #fff; z-index: 3; position: relative;}
-.recap-team-box img { width: 140px; height: 140px; object-fit: contain; }
+.recap-team-box img { width: 105px; height: 105px; object-fit: contain; }
 .recap-team-box .flag { font-size: 1.8rem; position: absolute; top: 10px; left: 20px; }
 
 .recap-map-box {
