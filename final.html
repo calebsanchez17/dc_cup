@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo Free Fire - Final</title>
+    <link rel="stylesheet" href="css/final.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- html2canvas para descargar imágenes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <!-- Botón Regresar -->
+    <a href="index.html" class="btn-regresar">
+        <i class="fas fa-arrow-left"></i> Regresar al Inicio
+    </a>
+
+    <!-- Menú de Navegación -->
+    <nav class="nav-container">
+        <button class="nav-btn active" onclick="changeTab('tabla')"><i class="fas fa-table"></i> 1. Tabla</button>
+        <button class="nav-btn" onclick="changeTab('booyah')"><i class="fas fa-medal"></i> 2. Booyah</button>
+        <button class="nav-btn" onclick="changeTab('mvp')"><i class="fas fa-star"></i> 3. MVP</button>
+        <button class="nav-btn" onclick="changeTab('equipos')"><i class="fas fa-users"></i> 4. Equipos (12)</button>
+        <button class="nav-btn" onclick="changeTab('destacado')"><i class="fas fa-fire"></i> 5. Destacado</button>
+    </nav>
+
+    <main class="content-wrapper">
+
+        <!-- ========================================== -->
+        <!-- TABLA FINAL (Vista 1) -->
+        <!-- ========================================== -->
+        <section id="tab-tabla" class="tab-content active">
+            <div class="action-bar">
+                <button class="btn-download" onclick="downloadImage('export-tabla', 'Clasificacion_Final')">
+                    <i class="fas fa-download"></i> Descargar Tabla
+                </button>
+            </div>
+            
+            <div class="scale-wrapper">
+                <div id="export-tabla" class="export-canvas view-tabla">
+                    <div class="ewc-header">
+                        <span class="left">DC CUP</span>
+                        <div class="center-logos">FREE FIRE <span class="divider">|</span> DC</div>
+                        <span class="right">EDICIÓN 1</span>
+                    </div>
+                    
+                    <h1 class="main-title">GRAN FINAL</h1>
+                    <p class="subtitle">DC CUP 1RA EDICION</p>
+
+                    <!-- Campeones -->
+                    <div class="campeones-banner" id="campeones-container">
+                        <!-- Generado por JS -->
+                    </div>
+
+                    <!-- Tabla 12 Equipos (Grid de 2 columnas) -->
+                    <div class="standings-grid" id="standings-container">
+                        <!-- Generado por JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- BOOYAH RECAP (Vista 2) -->
+        <!-- ========================================== -->
+        <section id="tab-booyah" class="tab-content">
+            <div class="action-bar">
+                <button class="btn-download" onclick="downloadImage('export-booyah', 'Booyah_Recap')">
+                    <i class="fas fa-download"></i> Descargar Booyah
+                </button>
+            </div>
+            
+            <div class="scale-wrapper">
+                <div id="export-booyah" class="export-canvas view-booyah">
+                    <div class="booyah-header">
+                        <div class="logos">FREE FIRE <span class="divider">|</span> DC CUP</div>
+                        <h1 class="booyah-title">BOOYAH!</h1>
+                        <div class="booyah-sub">DC CUP 1RA EDICIÓN <span class="fase">FASE FINAL</span></div>
+                    </div>  
+
+                    <div class="booyah-body">
+                        <div class="booyah-list" id="booyah-list-container">
+                            <!-- Generado por JS -->
+                        </div>
+                        <div class="booyah-player">
+                            <img src="https://placehold.co/500x900/1a1a1a/444444?text=FOTO+JUGADOR" alt="Player" id="booyah-player-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- MVP (Vista 3) -->
+        <!-- ========================================== -->
+        <section id="tab-mvp" class="tab-content">
+            <div class="action-bar">
+                <button class="btn-download" onclick="downloadImage('export-mvp', 'MVP_Jugador')">
+                    <i class="fas fa-download"></i> Descargar MVP
+                </button>
+            </div>
+            
+            <div class="scale-wrapper">
+                <div id="export-mvp" class="export-canvas view-mvp">
+                    <div class="mvp-top">
+                        <span class="logo">FREE FIRE</span>
+                        <span class="latam">DC CUP</span>
+                    </div>
+                    
+                    <h1 class="mvp-bg-text">MVP</h1>
+                    <div class="mvp-badge">GRAN FINAL</div>
+
+                    <img src="https://placehold.co/800x1000/transparent/dddddd?text=FOTO+MVP" class="mvp-photo" id="mvp-photo-img">
+
+                    <div class="mvp-stats-container" id="mvp-stats-container">
+                        <!-- Generado por JS -->
+                    </div>
+
+                    <div class="mvp-footer">
+                        <div class="team-name" id="mvp-team-name"></div>
+                        <div class="player-name">
+                            <span class="flag" id="mvp-flag"></span>
+                            <span id="mvp-name"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- EQUIPOS / SQUAD (Vista 4) MODIFICADO PARA CARTAS -->
+        <!-- ========================================== -->
+        <section id="tab-equipos" class="tab-content">
+            <div class="action-bar equipos-actions">
+                <label for="team-selector">Seleccionar Equipo:</label>
+                <select id="team-selector" onchange="renderRosterView()">
+                    <!-- Opciones de 12 equipos generadas por JS -->
+                </select>
+                <button class="btn-download" onclick="downloadImage('export-equipos', 'Escuadra_Roster')">
+                    <i class="fas fa-download"></i> DESCARGAR ESCUADRA
+                </button>
+            </div>
+            
+            <div class="scale-wrapper">
+                <div id="export-equipos" class="export-canvas view-equipos">
+                    <div class="equipos-content-wrapper">
+                        
+                        <!-- Encabezado (Ej: GRANADEROS COLOMBIA) inyectado por JS -->
+                        <div id="equipos-header-container"></div>
+
+                        <!-- Contenedor de las 5 cartas de jugadores generadas por JS -->
+                        <div id="roster-players-container" class="roster-players">
+                            <!-- Las cartas se generan aquí -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- DESTACADO GENERAL (Vista 5) -->
+        <!-- ========================================== -->
+        <section id="tab-destacado" class="tab-content">
+            <div class="action-bar">
+                <button class="btn-download" onclick="downloadImage('export-destacado', 'Destacado_General')">
+                    <i class="fas fa-download"></i> Descargar Destacado
+                </button>
+            </div>
+            
+            <div class="scale-wrapper">
+                <div id="export-destacado" class="export-canvas view-destacado">
+                    <div class="destacado-wrapper">
+                        <div class="destacado-header">
+                            <div class="sub">DC CUP 1RA EDICIÓN</div>
+                            <h1 class="title-big">EQUIPO<br>DESTACADO GENERAL</h1>
+                        </div>
+
+                        <div class="destacado-body">
+                            <div class="shield-section">
+                                <img src="https://placehold.co/400x450/004d26/ffffff?text=LOGO+GD" id="destacado-logo">
+                                <div class="team-desc" id="destacado-desc"></div>
+                            </div>
+                            <div class="players-grid" id="destacado-players">
+                                <!-- Generado por JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/final.js"></script>
+</body>
+</html>

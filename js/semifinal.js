@@ -14,7 +14,7 @@ const semifinalTeams = [
     { name: "F7 E-SPORT", flag: "🇦🇷", logo: "logos/f7.png", maps: 4, booyah: 0, ptsPos: 3, elims: 5, ptsExtra: 5 },
     { name: "RANK FLOW ESPORT", flag: "🇵🇪", logo: "logos/rf.png", maps: 4, booyah: 1, ptsPos: 29, elims: 41, ptsExtra: 5 },
     { name: "LOSP40", flag: "🇦🇷", logo: "logos/40.png", maps: 4, booyah: 0, ptsPos: 18, elims: 28, ptsExtra: 0 },
-    { name: "V9 ESPORT", flag: "🇨🇱", logo: "logos/nueve.png", maps: 4, booyah: 0, ptsPos: 25, elims: 23, ptsExtra: 0 },
+    { name: "V9 ESPORT", flag: "🇨🇱", logo: "logos/nueve.png", maps: 4, booyah: 0, ptsPos: 25, elims: 23, ptsExtra: 5 },
     { name: "FURIUS LYNX", flag: "🇦🇷", logo: "logos/flx.png", maps: 4, booyah: 0, ptsPos: 9, elims: 15, ptsExtra: 0 },
     { name: "TEAM CRAZY RABBITS", flag: "🇦🇷", logo: "logos/crazy.png", maps: 4, booyah: 1, ptsPos: 26, elims: 22, ptsExtra: 0 },
     { name: "TEAM 04", flag: "🇧🇷", logo: "logos/04.png", maps: 4, booyah: 0, ptsPos: 12, elims: 24, ptsExtra: 0 },
