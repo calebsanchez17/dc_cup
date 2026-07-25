@@ -344,22 +344,39 @@ function renderDestacado() {
 }
 
 // ==========================================
-// FUNCIÓN DE DESCARGA CON HTML2CANVAS
+// FUNCIÓN DE DESCARGA CON HTML2CANVAS (OPTIMIZADA)
 // ==========================================
 function downloadImage(elementId, filename) {
     const element = document.getElementById(elementId);
    
+    // Forzamos temporalmente el tamaño real de exportación para asegurar calidad y que salga completo
+    const originalWidth = element.style.width;
+    const originalHeight = element.style.height;
+    
+    element.style.width = "1080px";
+    element.style.height = "1350px";
+
     html2canvas(element, {
-        scale: 2,
+        scale: 2, // Mantiene la alta definición (Full HD / 2K)
         useCORS: true,
-        backgroundColor: null
+        backgroundColor: null,
+        windowWidth: 1080,  // Simula el ancho exacto del póster para evitar recortes
+        windowHeight: 1350 // Simula la altura exacta del póster
     }).then(canvas => {
+        // Restauramos los estilos originales de la pantalla
+        element.style.width = originalWidth;
+        element.style.height = originalHeight;
+
         const link = document.createElement('a');
         link.download = `${filename}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
     }).catch(err => {
+        // Restauramos estilos en caso de error también
+        element.style.width = originalWidth;
+        element.style.height = originalHeight;
+        
         console.error("Error al generar la imagen: ", err);
-        alert("Hubo un error al generar la imagen. Asegúrate de estar corriendo esto en un servidor local si usas imágenes externas.");
+        alert("Hubo un error al generar la imagen.");
     });
 }

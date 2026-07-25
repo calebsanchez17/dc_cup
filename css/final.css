@@ -16,14 +16,17 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
    DISEÑO RESPONSIVO (MÓVILES, TABLETS Y PC)
 ========================================= */
 
-/* Para pantallas medianas (Tablets o PCs pequeñas) */
-@media (max-width: 992px) {
-    /* Quitamos el ancho fijo estricto para que fluya en la pantalla */
-    .export-canvas {
-        width: 100% !important;
-        height: auto !important;
-        padding-bottom: 30px;
+/* =========================================
+   ADAPTADOR AUTOMÁTICO DE PANTALLA COMPLETA
+========================================= */
+@media (max-width: 1100px) {
+    .scale-wrapper {
+        /* Calcula automáticamente cuánto debe encogerse el póster de 1080px */
+        transform: scale(calc(100vw / 1120px));
+        height: calc(1350px * (100vw / 1120px)); /* Ajusta la altura proporcional para que no deje espacio vacío abajo */
+        margin-top: 10px;
     }
+}
 
     /* Achicamos los títulos un poco */
     .ff-title-black { font-size: 5rem; }
@@ -40,7 +43,6 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
         flex: 1 1 40%; 
         max-width: 250px;
     }
-}
 
 /* Para pantallas pequeñas (Celulares) */
 @media (max-width: 600px) {
@@ -107,14 +109,26 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
 }
 .btn-download:hover { background: white; box-shadow: 0 0 20px rgba(0, 210, 255, 0.6); }
 
-/* Contenedor que escala la vista 1080x1350 */
+/* Contenedor que adapta y centra el póster completo en cualquier pantalla */
 .scale-wrapper {
-    width: 100%; max-width: 1080px; overflow-x: auto;
-    display: flex; justify-content: center;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita barras de desplazamiento extrañas */
+    padding: 10px;
 }
+/* El lienzo base mantiene su tamaño real para que la descarga salga perfecta */
 .export-canvas {
-    width: var(--export-w); height: var(--export-h);
-    background-color: #111; position: relative; overflow: hidden; flex-shrink: 0;
+    width: var(--export-w); 
+    height: var(--export-h);
+    background-color: #111; 
+    position: relative; 
+    overflow: hidden; 
+    flex-shrink: 0;
+    transform-origin: top center; /* Hace que se encoge desde arriba hacia el centro */
 }
 
 /* =========================================
