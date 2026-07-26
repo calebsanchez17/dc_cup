@@ -75,7 +75,7 @@ const dataEquipos = [
         players: [
             { name: "UP.Drazz14", img: "jugador/701.png", elims: 0, kd: "0" },
             { name: "UP.Tronzx21p", img: "jugador/702.png", elims: 0, kd: "0" },
-            { name: "UP.aleezn:)", img: "jugador/703.png", elims: 0, kd: "0" },
+            { name: "UP.xtonyy777 pw", img: "jugador/703.png", elims: 0, kd: "0" },
             { name: "UP.RamirezBBY", img: "jugador/704.png", elims: 0, kd: "0" },
             { name: "UP.", img: "jugador/.png", elims: 0, kd: "0" }
         ]
