@@ -82,10 +82,10 @@ const dataEquipos = [
     {
         id: "team6", name: "V9 ESPORT", flag: "🇨🇱", logo: "logos/nueve.png",
         players: [
-            { name: "V9.ROCHA", img: "jugador/v1.png", salas: 4,elims: 8, kd: "2.0" },
-            { name: "V9.PAPITA", img: "jugador/v2.png", elims: 0, kd: "0" },
-            { name: "V9.SAXS", img: "jugador/v3.png", salas: 4, elims: 7, kd: "1.75" },
-            { name: "V9.MATEO", img: "jugador/v4.png", salas: 2, elims: 0, kd: "0" },
+            { name: "V9.ROCHA", img: "jugador/v91.png", salas: 4,elims: 8, kd: "2.0" },
+            { name: "V9.PAPITA", img: "jugador/v92.png", elims: 0, kd: "0" },
+            { name: "V9.SAXS", img: "jugador/v93.png", salas: 4, elims: 7, kd: "1.75" },
+            { name: "V9.MATEO", img: "jugador/v94.png", salas: 2, elims: 0, kd: "0" },
             { name: "V9.PELAO", img: "jugador/v5.png", salas: 2, elims: 5, kd: "2.5" }
         ]
     },
