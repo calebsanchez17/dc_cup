@@ -387,42 +387,37 @@ function renderDestacado() {
 }
 
 // ==========================================
-// AUTO-ESCALADO PARA PANTALLA COMPLETA (PC Y MÓVIL)
+// AUTO-ESCALADO MEJORADO (PC Y MÓVIL)
 // ==========================================
 function ajustarPantalla() {
     const lienzos = document.querySelectorAll('.export-canvas');
     
-    // Calculamos el espacio real disponible en la pantalla del dispositivo
-    const anchoDisponible = window.innerWidth - 20; // Dejamos un pequeño margen a los lados
-    const altoDisponible = window.innerHeight - 160; // Restamos el espacio que ocupa el menú de arriba
+    // Calculamos el ancho de la pantalla (dejando un pequeño margen de 20px)
+    const anchoDisponible = window.innerWidth - 20;
     
     lienzos.forEach(lienzo => {
-        // Calculamos la proporción para que quepa todo el diseño (1080x1350)
-        const escalaAncho = anchoDisponible / 1080;
-        const escalaAlto = altoDisponible / 1350;
+        // Adaptamos el póster al ANCHO de la pantalla, no al alto.
+        let escalaFinal = anchoDisponible / 1080;
         
-        // Elegimos la escala más pequeña para que NUNCA se corte ni de alto ni de ancho
-        // El '1' asegura que en PC no se haga gigante, respetando su tamaño máximo original
-        const escalaFinal = Math.min(escalaAncho, escalaAlto, 1); 
+        // Evitamos que en PC se haga gigante (máximo tamaño = 1 original)
+        if (escalaFinal > 1) {
+            escalaFinal = 1;
+        }
         
         // Aplicamos el escalado mágico
         lienzo.style.transform = `scale(${escalaFinal})`;
         lienzo.style.transformOrigin = "top center";
         
-        // Reducimos la altura del contenedor padre para que no quede un espacio negro vacío abajo
+        // Ajustamos la caja contenedora para que la página sepa hasta dónde hacer scroll
         if(lienzo.parentElement.classList.contains('scale-wrapper')) {
-            lienzo.parentElement.style.height = `${1350 * escalaFinal + 20}px`;
+            lienzo.parentElement.style.height = `${1350 * escalaFinal}px`;
         }
     });
 }
 
-// 1. Ejecutar al cargar la página
+// Eventos para ejecutar la función
 document.addEventListener('DOMContentLoaded', ajustarPantalla);
-
-// 2. Ejecutar si el usuario gira el celular o cambia el tamaño de la ventana
 window.addEventListener('resize', ajustarPantalla);
-
-// 3. Ejecutar al cambiar de pestaña para que la nueva vista se acomode al instante
 document.querySelectorAll('.nav-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         setTimeout(ajustarPantalla, 10);
