@@ -3,30 +3,30 @@
 // ==========================================
 
 const dataTabla = [
-    { pos: 1, img: "logos/br.png", name: "BR", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇵🇪" },
-    { pos: 2, img: "logos/ag.png", name: "AG", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇺🇾" },
-    { pos: 3, img: "logos/saiyans.png", name: "SAIYANS ", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇨🇱" },
-    { pos: 4, img: "logos/rf.png", name: "RF", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇵🇪" },
-    { pos: 5, img: "logos/777.png", name: "777", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇦🇷" },
-    { pos: 6, img: "logos/nueve.png", name: "V9", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇨🇱" },
-    { pos: 7, img: "logos/gd.png", name: "GD", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇦🇷" },
-    { pos: 8, img: "logos/crazy.png", name: "CR", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇦🇷" },
-    { pos: 9, img: "logos/40.png", name: "P40", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇦🇷" },
-    { pos: 10, img: "logos/z7.png", name: "Z7", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇨🇱" },
-    { pos: 11, img: "logos/04.png", name: "04", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇧🇷" },
-    { pos: 12, img: "logos/hlp.png", name: "HLP", game: 0, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇵🇪" }
+    { pos: 1, img: "logos/br.png", name: "BR", game: 4, elims: 0, posPts: 0, booyah: 0, total: 0, flag: "🇵🇪" },
+    { pos: 2, img: "logos/ag.png", name: "AG", game: 4, elims: 49, posPts: 27, booyah: 0, total: 76, flag: "🇺🇾" },
+    { pos: 3, img: "logos/dc.png", name: "DC ", game: 4, elims: 21, posPts: 13, booyah: 0, total: 34, flag: "🇵🇪" },
+    { pos: 4, img: "logos/rf.png", name: "RF", game: 4, elims: 32, posPts: 22, booyah: 0, total: 54, flag: "🇵🇪" },
+    { pos: 5, img: "logos/777.png", name: "777", game: 4, elims: 3, posPts: 8, booyah: 0, total: 11, flag: "🇦🇷" },
+    { pos: 6, img: "logos/nueve.png", name: "V9", game: 4, elims: 20, posPts: 12, booyah: 0, total: 32, flag: "🇨🇱" },
+    { pos: 7, img: "logos/gd.png", name: "GD", game: 4, elims: 13, posPts: 21, booyah: 0, total: 34, flag: "🇦🇷" },
+    { pos: 8, img: "logos/crazy.png", name: "CR", game: 4, elims: 50, posPts: 39, booyah: 3, total: 89, flag: "🇦🇷" },
+    { pos: 9, img: "logos/40.png", name: "P40", game: 4, elims: 13, posPts: 10, booyah: 0, total: 23, flag: "🇦🇷" },
+    { pos: 10, img: "logos/z7.png", name: "Z7", game: 4, elims: 35, posPts: 21, booyah: 0, total: 56, flag: "🇨🇱" },
+    { pos: 11, img: "logos/04.png", name: "04", game: 4, elims: 56, posPts: 28, booyah: 1, total: 84, flag: "🇧🇷" },
+    { pos: 12, img: "logos/hlp.png", name: "HLP", game: 4, elims: 32, posPts: 26, booyah: 0, total: 58, flag: "🇵🇪" }
 ];
 
 const dataBooyah = [
-    { map: "MAPA 1 - BERMUDA", mapImg: "mapas/bermuda.jpg", logo: "logos/.png", elims: 0, pts: 0, flag: "" },
-    { map: "MAPA 2 - SOLARA", mapImg: "mapas/purgatorio.jpg", logo: "logos/.png", elims: 0, pts: 0, flag: "" },
-    { map: "MAPA 3 - PURGATORIO", mapImg: "mapas/kalahari.jpg", logo: "logos/.png", elims: 0, pts: 0, flag: "" },
-    { map: "MAPA 4 - NEXTERRA", mapImg: "mapas/nexterra.jpg", logo: "logos/.png", elims: 0, pts: 0, flag: "" }
+    { map: "MAPA 1 - BERMUDA", mapImg: "mapas/bermuda.jpg", logo: "logos/crazy.png", elims: 16, pts: 28, flag: "🇦🇷" },
+    { map: "MAPA 2 - SOLARA", mapImg: "mapas/purgatorio.jpg", logo: "logos/crazy.png", elims: 13, pts: 25, flag: "🇦🇷" },
+    { map: "MAPA 3 - PURGATORIO", mapImg: "mapas/kalahari.jpg", logo: "logos/crazy.png", elims: 15, pts: 27, flag: "🇦🇷" },
+    { map: "MAPA 4 - NEXTERRA", mapImg: "mapas/nexterra.jpg", logo: "logos/04.png", elims: 26, pts: 38, flag: "🇧🇷" }
 ];
 
 const dataMVP = {
-    name: "", team: "", flag: "", elims: 0, assists: 0, kd: 0,
-    photo: "jugador/.png"
+    name: "04.Lewis44", team: "TEAM 04", flag: "🇧🇷", elims: 20, assists: 0, kd: 5.0,
+    photo: "jugador/02.png"
 };
 
 const dataEquipos = [
@@ -154,15 +154,14 @@ const dataEquipos = [
 ];
 
 const dataDestacado = {
-    teamName: "",
-    logo: "logos/.png",
-    totalPoints: 0,
+    teamName: "AG STORM ESPORT",
+    logo: "logos/ag.png",
+    totalPoints: 323,
     playersImages: [
-        "jugador/.png",
-        "jugador/.png",
-        "jugador/.png",
-        "jugador/.png",
-        "jugador/.png"
+        "jugador/ag1.png",
+        "jugador/ag2.png",
+        "jugador/ag3.png",
+        "jugador/ag4.png"
     ]
 };
 
@@ -190,14 +189,41 @@ function changeTab(tabId) {
 // RENDERIZADOS
 // ==========================================
 function renderTabla() {
+    // 1. Ordenar la tabla de mayor a menor según el total de puntos
+    dataTabla.sort((a, b) => b.total - a.total);
+
+    // 2. Reasignar las posiciones correctas según el nuevo orden
+    dataTabla.forEach((equipo, index) => {
+        equipo.pos = index + 1;
+    });
+
+    // 3. El campeón siempre será el índice 0 (el primero)
     const champ = dataTabla[0];
-   
+    
+    // 4. Buscar la escuadra del equipo campeón en dataEquipos usando el logo o nombre
+    const equipoDetalle = dataEquipos.find(eq => eq.logo === champ.img || eq.name.includes(champ.name.trim()));
+    
+    let fotosHtml = "";
+    if (equipoDetalle && equipoDetalle.players) {
+        // Tomamos hasta 5 jugadores que tengan una imagen válida asignada
+        const validPlayers = equipoDetalle.players.filter(p => p.img && p.img !== "jugador/.png").slice(0, 5);
+        
+        // Creamos las etiquetas de imagen para cada jugador
+        fotosHtml = validPlayers.map(p => `
+            <img src="${p.img}" onerror="this.src='https://placehold.co/150x200/222/fff?text=NO+FOTO'" style="height: 160px; flex: 1; min-width: 0; object-fit: cover; object-position: top; border-right: 2px solid #111;">
+        `).join('');
+    } else {
+        fotosHtml = `<div style="display:flex; width:100%; height:160px; background:#222; color:#555; align-items:center; justify-content:center; font-weight:bold;">FOTOS NO DISPONIBLES</div>`;
+    }
+
     document.getElementById('campeones-container').innerHTML = `
-        <div style="position:relative;">
-            <div style="position:absolute; top:-20px; left:20px; background:black; color:white; padding:4px 12px; font-size:1.2rem; font-weight:bold;">CAMPEONES</div>
-            <img src="https://placehold.co/600x180/222/fff?text=FOTO+DEL+EQUIPO+CAMPEON" class="champ-photo" style="height: 160px; width: 100%; object-fit: cover;">
+        <div style="position:relative; display: flex; width: 60%; background: #111; overflow: hidden; border-radius: 8px 0 0 8px;">
+            <div style="position:absolute; top:-12px; left:15px; background:black; color:white; padding:4px 12px; font-size:1rem; font-weight:bold; z-index: 10;">CAMPEONES</div>
+            <div style="display: flex; width: 100%; height: 160px;">
+                ${fotosHtml}
+            </div>
         </div>
-        <div class="champ-stats">
+        <div class="champ-stats" style="width: 40%;">
             <div class="titles"><span>ELIMS</span><span>BOOYAH!</span><span>TOTAL</span></div>
             <div class="numbers"><span>${champ.elims}</span><span>${champ.booyah}</span><span>${champ.total}</span></div>
             <div class="champ-bottom">
@@ -209,13 +235,13 @@ function renderTabla() {
     `;
 
     let html = `<div class="s-col">`;
-   
+    
     html += `
         <div class="s-row header">
             <div>POS</div><div>EQUIPO</div><div>JUEGO</div><div>ELIMS</div><div>PUNTOS POS</div><div>BOOYAH</div><div>TOTAL</div>
         </div>
     `;
-       
+        
     dataTabla.forEach(t => {
         html += `
         <div class="s-row">
@@ -228,10 +254,27 @@ function renderTabla() {
             <div class="stat total">${t.total}</div>
         </div>`;
     });
-   
+    
     html += `</div>`;
     document.getElementById('standings-container').innerHTML = html;
 }
+        
+    dataTabla.forEach(t => {
+        html += `
+        <div class="s-row">
+            <div class="pos">${t.pos}</div>
+            <div class="team-info">${t.flag} <img src="${t.img}"> ${t.name}</div>
+            <div class="stat">${t.game}</div>
+            <div class="stat">${t.elims}</div>
+            <div class="stat">${t.posPts}</div>
+            <div class="stat">${t.booyah}</div>
+            <div class="stat total">${t.total}</div>
+        </div>`;
+    });
+    
+    html += `</div>`;
+    document.getElementById('standings-container').innerHTML = html;
+
 
 function renderBooyah() {
     const container = document.getElementById('booyah-list-container');
@@ -342,6 +385,49 @@ function renderDestacado() {
         <div class="d-player"><img src="${img}"></div>
     `).join('');
 }
+
+// ==========================================
+// AUTO-ESCALADO PARA PANTALLA COMPLETA (PC Y MÓVIL)
+// ==========================================
+function ajustarPantalla() {
+    const lienzos = document.querySelectorAll('.export-canvas');
+    
+    // Calculamos el espacio real disponible en la pantalla del dispositivo
+    const anchoDisponible = window.innerWidth - 20; // Dejamos un pequeño margen a los lados
+    const altoDisponible = window.innerHeight - 160; // Restamos el espacio que ocupa el menú de arriba
+    
+    lienzos.forEach(lienzo => {
+        // Calculamos la proporción para que quepa todo el diseño (1080x1350)
+        const escalaAncho = anchoDisponible / 1080;
+        const escalaAlto = altoDisponible / 1350;
+        
+        // Elegimos la escala más pequeña para que NUNCA se corte ni de alto ni de ancho
+        // El '1' asegura que en PC no se haga gigante, respetando su tamaño máximo original
+        const escalaFinal = Math.min(escalaAncho, escalaAlto, 1); 
+        
+        // Aplicamos el escalado mágico
+        lienzo.style.transform = `scale(${escalaFinal})`;
+        lienzo.style.transformOrigin = "top center";
+        
+        // Reducimos la altura del contenedor padre para que no quede un espacio negro vacío abajo
+        if(lienzo.parentElement.classList.contains('scale-wrapper')) {
+            lienzo.parentElement.style.height = `${1350 * escalaFinal + 20}px`;
+        }
+    });
+}
+
+// 1. Ejecutar al cargar la página
+document.addEventListener('DOMContentLoaded', ajustarPantalla);
+
+// 2. Ejecutar si el usuario gira el celular o cambia el tamaño de la ventana
+window.addEventListener('resize', ajustarPantalla);
+
+// 3. Ejecutar al cambiar de pestaña para que la nueva vista se acomode al instante
+document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        setTimeout(ajustarPantalla, 10);
+    });
+});
 
 // ==========================================
 // FUNCIÓN DE DESCARGA CON HTML2CANVAS (OPTIMIZADA)

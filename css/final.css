@@ -109,18 +109,15 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
 }
 .btn-download:hover { background: white; box-shadow: 0 0 20px rgba(0, 210, 255, 0.6); }
 
-/* Contenedor que adapta y centra el póster completo en cualquier pantalla */
+/* Contenedor principal */
 .scale-wrapper {
     width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Evita barras de desplazamiento extrañas */
-    padding: 10px;
+    overflow: hidden;
+    padding-top: 10px;
 }
-/* El lienzo base mantiene su tamaño real para que la descarga salga perfecta */
+
 .export-canvas {
     width: var(--export-w); 
     height: var(--export-h);
@@ -128,7 +125,6 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
     position: relative; 
     overflow: hidden; 
     flex-shrink: 0;
-    transform-origin: top center; /* Hace que se encoge desde arriba hacia el centro */
 }
 
 /* =========================================
