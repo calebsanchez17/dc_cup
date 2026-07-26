@@ -25,7 +25,7 @@ const dataBooyah = [
 ];
 
 const dataMVP = {
-    name: "04.Lewis44", team: "TEAM 04", flag: "🇧🇷", elims: 20, assists: 0, kd: 5.0,
+    name: "04.Lewis44", team: "TEAM 04", flag: "🇧🇷", elims: 20, assists: 13, kd: 5.0,
     photo: "jugador/02.png"
 };
 
@@ -43,112 +43,111 @@ const dataEquipos = [
     {
         id: "team2", name: "AG STORM ESPORT", flag: "🇺🇾", logo: "logos/ag.png",
         players: [
-            { name: "AG.Yimzd788", img: "jugador/ag1.png", elims: 0, kd: "0" },
-            { name: "AG.Teozn788", img: "jugador/ag2.png", elims: 0, kd: "0" },
+            { name: "AG.Yimzd788", img: "jugador/ag1.png",salas: 0, elims: 0, kd: "0" },
+            { name: "AG.Teozn788", img: "jugador/ag2.png",salas: 4, elims: 17, kd: "4.25" },
             { name: "AG.Pedro788", img: "jugador/ag3.png", elims: 0, kd: "0" },
             { name: "AG.Larryzada", img: "jugador/ag4.png", elims: 0, kd: "0" },
             { name: "AG.", img: "jugador/ag5.png", elims: 0, kd: "0" }
         ]
     },
     {
-        id: "team3", name: "SAIYANS ESPORT", flag: "🇨🇱", logo: "logos/saiyans.png",
+        id: "team3", name: "DC ESPORT RED", flag: "🇵🇪", logo: "logos/dc.png",
         players: [
-            { name: "SA.stevens", img: "jugador/sa1.png", elims: 0, kd: "0" },
-            { name: "SA.retro", img: "jugador/sa2.png", elims: 0, kd: "0" },
-            { name: "SA.piraña", img: "jugador/sa3.png", elims: 0, kd: "0" },
-            { name: "SA.maldito", img: "jugador/sa4.png", elims: 0, kd: "0" },
-            { name: "SA.pipe", img: "jugador/sa5.png", elims: 0, kd: "0" }
+            { name: "DC.Baez", img: "jugador/dc1.png", salas: 3, elims: 7, kd: "2.3" },
+            { name: "DC.Drago", img: "jugador/dc2.png", salas: 3, elims: 4, kd: "1.3" },
+            { name: "DC.Vidal", img: "jugador/dc3.png", salas: 3, elims: 5, kd: "1.6" },
+            { name: "DC.Neo", img: "jugador/dc4.png", salas: 3, elims: 5, kd: "1.6" }
         ]
     },
     {
         id: "team4", name: "RANK FLOW ESPORT", flag: "🇵🇪", logo: "logos/rf.png",
         players: [
-            { name: "RF.PICU", img: "jugador/rf1.png", elims: 0, kd: "0" },
-            { name: "RF.FACU", img: "jugador/rf2.png", elims: 0, kd: "0" },
-            { name: "RF.DAVHID", img: "jugador/rf3.png", elims: 0, kd: "0" },
-            { name: "RF.FERB", img: "jugador/rf4.png", elims: 0, kd: "0" },
-            { name: "RF.BLEXX", img: "jugador/rf5.png", elims: 0, kd: "0" }
+            { name: "RF.PICU", img: "jugador/rf1.png", salas: 4, elims: 10, kd: "2.5" },
+            { name: "RF.FACU", img: "jugador/rf2.png", salas: 0, elims: 0, kd: "0" },
+            { name: "RF.DAVHID", img: "jugador/rf3.png", salas: 4, elims: 1, kd: "0.25" },
+            { name: "RF.FERB", img: "jugador/rf4.png", salas: 4, elims: 15, kd: "3.75" },
+            { name: "RF.BLEXX", img: "jugador/rf5.png", salas: 0, elims: 0, kd: "0" }
         ]
     },
     {
         id: "team5", name: "TEAM 777", flag: "🇦🇷", logo: "logos/777.png",
         players: [
-            { name: "UP.Drazz14", img: "jugador/701.png", elims: 0, kd: "0" },
-            { name: "UP.Tronzx21p", img: "jugador/702.png", elims: 0, kd: "0" },
-            { name: "UP.xtonyy777 pw", img: "jugador/703.png", elims: 0, kd: "0" },
-            { name: "UP.RamirezBBY", img: "jugador/704.png", elims: 0, kd: "0" },
-            { name: "UP.", img: "jugador/.png", elims: 0, kd: "0" }
+            { name: "UP.Drazz14", img: "jugador/701.png", salas: 0, elims: 0, kd: "0" },
+            { name: "UP.Tronzx21p", img: "jugador/702.png", salas: 0, elims: 0, kd: "0" },
+            { name: "UP.xtonyy777 pw", img: "jugador/703.png", salas: 0, elims: 0, kd: "0" },
+            { name: "UP.RamirezBBY", img: "jugador/704.png", salas: 0, elims: 0, kd: "0" },
+            { name: "UP.", img: "jugador/.png",  salas: 0, elims: 0, kd: "0" }
         ]
     },
     {
         id: "team6", name: "V9 ESPORT", flag: "🇨🇱", logo: "logos/nueve.png",
         players: [
-            { name: "V9.ROCHA", img: "jugador/v1.png", elims: 0, kd: "0" },
+            { name: "V9.ROCHA", img: "jugador/v1.png", salas: 4,elims: 8, kd: "2.0" },
             { name: "V9.PAPITA", img: "jugador/v2.png", elims: 0, kd: "0" },
-            { name: "V9.SAXS", img: "jugador/v3.png", elims: 0, kd: "0" },
-            { name: "V9.MATEO", img: "jugador/v4.png", elims: 0, kd: "0" },
-            { name: "V9.PELAO", img: "jugador/v5.png", elims: 0, kd: "0" }
+            { name: "V9.SAXS", img: "jugador/v3.png", salas: 4, elims: 7, kd: "1.75" },
+            { name: "V9.MATEO", img: "jugador/v4.png", salas: 2, elims: 0, kd: "0" },
+            { name: "V9.PELAO", img: "jugador/v5.png", salas: 2, elims: 5, kd: "2.5" }
         ]
     },
     {
         id: "team7", name: "GHOST DEMONDS", flag: "🇦🇷", logo: "logos/gd.png",
         players: [
-            { name: "GD.RAMI", img: "jugador/gd1.png", elims: 0, kd: "0" },
-            { name: "GD.MADARA", img: "jugador/gd2.png", elims: 0, kd: "0" },
-            { name: "GD.FRAN", img: "jugador/gd3.png", elims: 0, kd: "0" },
-            { name: "GD.JULI", img: "jugador/gd4.png", elims: 0, kd: "0" },
-            { name: "GD.", img: "jugador/gd5.png", elims: 0, kd: "0" }
+            { name: "GD.RAMI", img: "jugador/gd1.png", salas: 4,elims: 4, kd: "1.0" },
+            { name: "GD.MADARA", img: "jugador/gd2.png", salas: 0,elims: 0, kd: "0" },
+            { name: "GD.FRAN", img: "jugador/gd3.png", salas: 0,elims: 0, kd: "0" },
+            { name: "GD.JULI", img: "jugador/gd4.png", salas: 0,elims: 0, kd: "0" },
+            { name: "GD.", img: "jugador/gd5.png", salas: 0,elims: 0, kd: "0" }
         ]
     },
     {
         id: "team8", name: "TEAM CRAZY RABBITS", flag: "🇦🇷", logo: "logos/crazy.png",
         players: [
-            { name: "CR.Jotagod", img: "jugador/cr1.png", elims: 0, kd: "0" },
-            { name: "CR.ItsSeven", img: "jugador/cr2.png", elims: 0, kd: "0" },
-            { name: "CR.AGUSS", img: "jugador/cr3.png", elims: 0, kd: "0" },
-            { name: "CR.GALO", img: "jugador/cr4.png", elims: 0, kd: "0" },
-            { name: "CR.Zurdogg", img: "jugador/cr5.png", elims: 0, kd: "0" }
+            { name: "CR.Jotagod", img: "jugador/cr1.png", salas: 4,elims: 17, kd: "4.25" },
+            { name: "CR.ItsSeven", img: "jugador/cr2.png", salas: 4,elims: 6, kd: "1.5" },
+            { name: "CR.AGUSS", img: "jugador/cr3.png", salas: 4,elims: 17, kd: "4.25" },
+            { name: "CR.GALO", img: "jugador/cr4.png", salas: 0,elims: 0, kd: "0" },
+            { name: "CR.Zurdogg", img: "jugador/cr5.png", salas: 4,elims: 10, kd: "2.5" }
         ]
     },
     {
         id: "team9", name: "LOSP40", flag: "🇦🇷", logo: "logos/40.png",
         players: [
-            { name: "P40.Vixxo17", img: "jugador/403.png", elims: 0, kd: "0" },
-            { name: "P40.Nerox10", img: "jugador/402.png", elims: 0, kd: "0" },
-            { name: "P40.LAUTI PRIME", img: "jugador/405.png", elims: 0, kd: "0" },
-            { name: "P40.Ezek!ng", img: "jugador/404.png", elims: 0, kd: "0" },
-            { name: "P40.Thiagoxit", img: "jugador/401.png", elims: 0, kd: "0" }
+            { name: "P40.Vixxo17", img: "jugador/403.png", salas: 3,elims: 3, kd: "1.0" },
+            { name: "P40.Nerox10", img: "jugador/402.png", salas: 3,elims: 3, kd: "1.0" },
+            { name: "P40.LAUTI PRIME", img: "jugador/405.png", salas: 3,elims: 4, kd: "1.3" },
+            { name: "P40.Ezek!ng", img: "jugador/404.png", salas: 3,elims: 3, kd: "1.0" },
+            { name: "P40.Thiagoxit", img: "jugador/401.png", salas: 0,elims: 0, kd: "0" }
         ]
     },
     {
         id: "team10", name: "ESPORT ZENITH", flag: "🇨🇱", logo: "logos/z7.png",
         players: [
-            { name: "Z7.Kabrihña", img: "jugador/z1.png", elims: 0, kd: "0" },
-            { name: "Z7.Agusx", img: "jugador/z2.png", elims: 0, kd: "0" },
-            { name: "Z7.David", img: "jugador/z3.png", elims: 0, kd: "0" },
-            { name: "Z7.Seba", img: "jugador/z4.png", elims: 0, kd: "0" },
-            { name: "Z7.Nass", img: "jugador/z5.png", elims: 0, kd: "0" }
+            { name: "Z7.Kabrihña", img: "jugador/z1.png", salas: 4,elims: 11, kd: "2.75" },
+            { name: "Z7.Agusx", img: "jugador/z2.png", salas: 4,elims: 13, kd: "3.25" },
+            { name: "Z7.David", img: "jugador/z3.png", salas: 0,elims: 0, kd: "0" },
+            { name: "Z7.Seba", img: "jugador/z4.png", salas: 4,elims: 7, kd: "1.75" },
+            { name: "Z7.Nass", img: "jugador/z5.png", salas: 4,elims: 5, kd: "1.25" }
         ]
     },
     {
         id: "team11", name: "TEAM 04", flag: "🇧🇷", logo: "logos/04.png",
         players: [
-            { name: "04.Lewis44", img: "jugador/02.png", elims: 0, kd: "0" },
-            { name: "04.papayadx7", img: "jugador/03.png", elims: 0, kd: "0" },
-            { name: "04.bachira", img: "jugador/004.png", elims: 0, kd: "0" },
-            { name: "04.tilapia7v", img: "jugador/05.png", elims: 0, kd: "0" },
-            { name: "04.LaraX", img: "jugador/01.png", elims: 0, kd: "0" }
+            { name: "04.Lewis44", img: "jugador/02.png", salas: 4,elims: 20, kd: "5.0" },
+            { name: "04.papayadx7", img: "jugador/03.png", salas: 4,elims: 4, kd: "1.0" },
+            { name: "04.bachira", img: "jugador/004.png", salas: 4,elims: 19, kd: "4.75" },
+            { name: "04.tilapia7v", img: "jugador/05.png", salas: 0,elims: 0, kd: "0" },
+            { name: "04.LaraX", img: "jugador/01.png", salas: 4,elims: 13, kd: "3.25" }
         ]
     },
     {
         id: "team12", name: "ESPORT HLP", flag: "🇵🇪", logo: "logos/hlp.png",
         players: [
-            { name: "HLP.LOLO", img: "jugador/h1.png", elims: 0, kd: "0" },
-            { name: "HLP.RAI", img: "jugador/h2.png", elims: 0, kd: "0" },
-            { name: "HLP.INKA", img: "jugador/h3.png", elims: 0, kd: "0" },
-            { name: "HLP.ROZAS", img: "jugador/h4.png", elims: 0, kd: "0" },
-            { name: "HLP.CARLOS", img: "jugador/h5.png", elims: 0, kd: "0" },
-            { name: "HLP.ADRIAN", img: "jugador/h6.png", elims: 0, kd: "0" }
+            { name: "HLP.LOLO", img: "jugador/h1.png", salas: 4,elims: 5, kd: "1.25" },
+            { name: "HLP.RAI", img: "jugador/h2.png", salas: 0,elims: 0, kd: "0" },
+            { name: "HLP.INKA", img: "jugador/h3.png", salas: 4,elims: 10, kd: "2.5" },
+            { name: "HLP.ROZAS", img: "jugador/h4.png", salas: 0,elims: 0, kd: "0" },
+            { name: "HLP.CARLOS", img: "jugador/h5.png", salas: 0,elims: 0, kd: "0" },
+            { name: "HLP.ADRIAN", img: "jugador/h6.png", salas: 0,elims: 0, kd: "0" }
         ]
     }
 ];
@@ -258,22 +257,6 @@ function renderTabla() {
     html += `</div>`;
     document.getElementById('standings-container').innerHTML = html;
 }
-        
-    dataTabla.forEach(t => {
-        html += `
-        <div class="s-row">
-            <div class="pos">${t.pos}</div>
-            <div class="team-info">${t.flag} <img src="${t.img}"> ${t.name}</div>
-            <div class="stat">${t.game}</div>
-            <div class="stat">${t.elims}</div>
-            <div class="stat">${t.posPts}</div>
-            <div class="stat">${t.booyah}</div>
-            <div class="stat total">${t.total}</div>
-        </div>`;
-    });
-    
-    html += `</div>`;
-    document.getElementById('standings-container').innerHTML = html;
 
 
 function renderBooyah() {
@@ -344,6 +327,9 @@ function renderRosterView() {
     playersContainer.innerHTML = playersToShow.map((p, i) => {
         const imgSrc = p.img ? p.img : `https://placehold.co/400x600/transparent/dddddd?text=PLAYER+${i+1}`;
         const tLogo = team.logo || `https://placehold.co/150x80/ffffff/000000?text=LOGO`;
+        
+        // AQUÍ RECOPILAMOS LA INFO DE SALAS, ELIMS Y KD
+        const s = p.salas !== undefined ? p.salas : '0';
         const e = p.elims !== undefined ? p.elims : '0';
         const k = p.kd !== undefined ? p.kd : '0.0';
 
@@ -363,6 +349,10 @@ function renderRosterView() {
             </div>
             
             <div class="ff-card-stats">
+                <div class="ff-stat-row">
+                    <div class="ff-stat-label">SALAS</div>
+                    <div class="ff-stat-value">${s}</div>
+                </div>
                 <div class="ff-stat-row">
                     <div class="ff-stat-label">ELIMS</div>
                     <div class="ff-stat-value">${e}</div>
@@ -387,31 +377,37 @@ function renderDestacado() {
 }
 
 // ==========================================
-// AUTO-ESCALADO MEJORADO (PC Y MÓVIL)
+// AUTO-ESCALADO DEFINITIVO (PC Y MÓVIL)
 // ==========================================
 function ajustarPantalla() {
     const lienzos = document.querySelectorAll('.export-canvas');
     
-    // Calculamos el ancho de la pantalla (dejando un pequeño margen de 20px)
-    const anchoDisponible = window.innerWidth - 20;
-    
     lienzos.forEach(lienzo => {
-        // Adaptamos el póster al ANCHO de la pantalla, no al alto.
+        const contenedor = lienzo.parentElement;
+        
+        // 1. Apagamos el "flex" del CSS que está recortando tu imagen en celulares
+        contenedor.style.display = "block";
+        contenedor.style.overflowX = "hidden"; 
+        
+        // 2. Medimos el ancho exacto de la pantalla
+        const anchoDisponible = contenedor.clientWidth || window.innerWidth;
+        
+        // 3. Calculamos la escala para que todo el póster quepa en la pantalla
         let escalaFinal = anchoDisponible / 1080;
+        if (escalaFinal > 1) escalaFinal = 1; // En PC respetamos el tamaño original
         
-        // Evitamos que en PC se haga gigante (máximo tamaño = 1 original)
-        if (escalaFinal > 1) {
-            escalaFinal = 1;
-        }
+        // 4. Alineamos la escala hacia la izquierda para evitar cortes
+        lienzo.style.transformOrigin = "top left";
         
-        // Aplicamos el escalado mágico
-        lienzo.style.transform = `scale(${escalaFinal})`;
-        lienzo.style.transformOrigin = "top center";
+        // 5. Calculamos exactamente cuántos píxeles debemos moverlo para que quede al centro
+        const anchoEscalado = 1080 * escalaFinal;
+        const margenIzquierdo = (anchoDisponible - anchoEscalado) / 2;
         
-        // Ajustamos la caja contenedora para que la página sepa hasta dónde hacer scroll
-        if(lienzo.parentElement.classList.contains('scale-wrapper')) {
-            lienzo.parentElement.style.height = `${1350 * escalaFinal}px`;
-        }
+        // 6. Aplicamos el movimiento y la escala simultáneamente
+        lienzo.style.transform = `translateX(${margenIzquierdo}px) scale(${escalaFinal})`;
+        
+        // 7. Ajustamos el alto del fondo para no dejar espacios vacíos
+        contenedor.style.height = `${1350 * escalaFinal}px`;
     });
 }
 

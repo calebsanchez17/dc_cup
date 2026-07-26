@@ -16,30 +16,24 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
    DISEÑO RESPONSIVO (MÓVILES, TABLETS Y PC)
 ========================================= */
 
-/* Achicamos los títulos un poco */
 .ff-title-black { font-size: 5rem; }
 .ff-title-white { font-size: 3rem; }
 
-/* MAGIA: Permite que las cartas bajen a la siguiente línea si no caben */
 #roster-players-container, .roster-players {
     flex-wrap: wrap; 
     gap: 20px;
 }
 
-/* Las cartas ahora ocupan casi la mitad de la pantalla para apilarse 2 arriba, 2 al medio, etc. */
 .ff-card {
     flex: 1 1 40%; 
     max-width: 250px;
 }
 
-/* Para pantallas pequeñas (Celulares) */
 @media (max-width: 600px) {
-    /* Reducimos los márgenes de los lados para aprovechar el espacio */
     .view-equipos { 
         padding: 40px 15px; 
     }
     
-    /* Textos del encabezado más amigables para el móvil */
     .ff-title-black { 
         font-size: 3.5rem; 
         padding: 5px 20px; 
@@ -50,15 +44,15 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
         padding: 5px 20px; 
     }
 
-    /* Ajustamos el contenedor de la foto para que no se vea tan estirado en el celular */
     .ff-card-img-wrapper {
-        height: 250px; 
+        height: 230px; 
     }
     
-    /* Ajustamos los números de las estadísticas para que no se desborden */
     .ff-stat-value { 
-        font-size: 1.4rem; 
-        padding: 4px;
+        font-size: 1.3rem !important; 
+    }
+    .ff-stat-label {
+        font-size: 0.75rem !important;
     }
 }
 
@@ -240,77 +234,75 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
 }
 
 /* =======================================================
-   REPARACIÓN DE CARTAS: Misma altura, ancho proporcional
+   ESTRUCTURA DE CARTAS Y ALINEACIÓN
 ========================================================== */
 #roster-players-container, .roster-players {
     display: flex; 
     justify-content: center; 
-    align-items: stretch; /* Obliga a que todas tengan el mismo alto */
+    align-items: stretch; 
     gap: 15px; 
     width: 100%;
     margin-top: 20px;
     padding: 0 10px; 
 }
 
-/* IMPORTANTE: Cambiado a .ff-card para conectar con el JS */
 .ff-card {
-    flex: 1 1 0; /* Asegura que todas tengan el mismo ancho exacto */
+    flex: 1 1 0; 
     max-width: 220px; 
     min-width: 140px; 
     display: flex;
     flex-direction: column;
-    background: #111;
+    background: #000;
     border: 3px solid #000;
     position: relative;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
 
-/* Barra del Nombre y Número */
 .ff-card-top { 
     display: flex; 
     background: #fff; 
     color: #000; 
-    margin-bottom: 8px; 
     font-weight: 900; 
     align-items: stretch;
+    width: 100%;
 }
 
-/* Recuadro negro para el número */
 .ff-num { 
     background: #000; 
     color: #fff; 
     padding: 6px 12px; 
-    font-size: 1.2rem; 
+    font-size: 1.1rem; 
     display: flex; 
     align-items: center; 
     justify-content: center;
 }
 
-/* Espacio blanco para el nombre del jugador */
 .ff-name { 
     padding: 6px 10px; 
-    font-size: 1.1rem; 
+    font-size: 1rem; 
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
     text-transform: uppercase; 
     display: flex; 
     align-items: center;
+    color: #000;
+    font-weight: 900;
 }
 
 .ff-card-img-wrapper {
     background: #1a1a1a;
     position: relative;
-    height: 380px; /* Altura estricta para alinear todo */
+    height: 290px;
     overflow: hidden;
     display: flex; 
     justify-content: center; 
     align-items: flex-end;
-    border: 1px solid #444;
+    border: 1px solid #333;
 }
 
 .ff-card-img-wrapper::before {
-    content: ""; position: absolute; top: 10px; left: 10px; width: 40px; height: 40px;
+    content: ""; position: absolute; top: 10px; right: 10px; width: 35px; height: 35px;
     background: url('https://placehold.co/40x40/transparent/666666?text=QR') center/cover; opacity: 0.3;
 }
 
@@ -326,20 +318,59 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
 
 .ff-card-logo {
     background: #fff;
-    margin: -35px 20px 15px 20px; 
+    margin: -25px auto 10px auto; 
     position: relative;
     z-index: 3;
-    height: 70px;
-    display: flex; justify-content: center; align-items: center;
-    border: 3px solid #ddd;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    height: 55px;
+    width: 80%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 .ff-card-logo img { max-width: 80%; max-height: 70%; object-fit: contain; }
 
-.ff-card-stats { display: flex; flex-direction: column; gap: 8px; }
-.ff-stat-row { display: flex; flex-direction: column; text-align: center; }
-.ff-stat-label { background: #666; color: #fff; font-size: 0.85rem; font-weight: bold; padding: 4px; letter-spacing: 1px;}
-.ff-stat-value { background: #fff; color: #000; font-size: 1.8rem; font-weight: 900; padding: 6px; border: 1px solid #ccc; border-top: none;}
+/* =======================================================
+   ESTADÍSTICAS OFICIALES: BARRA GRIS + CAJA BLANCA APILADAS
+========================================================== */
+.ff-card-stats { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 3px; 
+    width: 100%;
+    background: #000;
+}
+
+.ff-stat-row { 
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;
+}
+
+.ff-stat-label { 
+    background: #6e6e6e; 
+    color: #ffffff; 
+    font-size: 0.8rem; 
+    font-weight: 700; 
+    padding: 3px 0; 
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.ff-stat-value { 
+    background: #ffffff; 
+    color: #000000; 
+    font-size: 1.6rem; 
+    font-weight: 900; 
+    padding: 4px 0; 
+    text-align: center;
+    width: 100%;
+    border: none;
+    line-height: 1;
+}
 
 /* =========================================
    VISTA 5: DESTACADO GENERAL
@@ -367,12 +398,10 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
    ARREGLO DE MENÚ PARA CELULARES
 ========================================= */
 @media (max-width: 768px) {
-    /* Quitamos el espacio gigante de arriba */
     body {
         padding-top: 10px;
     }
     
-    /* Hacemos que el botón regresar deje de flotar y se ponga en el centro arriba */
     .btn-regresar {
         position: relative;
         top: 0;
@@ -382,7 +411,6 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
         justify-content: center;
     }
 
-    /* Achicamos un poco los botones de pestañas para que quepan mejor */
     .nav-container {
         padding: 10px;
         gap: 8px;
@@ -392,7 +420,6 @@ body { background-color: var(--bg-dark); color: var(--text-light); padding-top: 
         padding: 8px 15px;
     }
 
-    /* Centramos el botón de descarga */
     .action-bar {
         justify-content: center;
         flex-direction: column;
